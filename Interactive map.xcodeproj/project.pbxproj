@@ -14,6 +14,11 @@
 		8C9D3E871FD9A14800821BEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9D3E851FD9A14800821BEB /* LaunchScreen.storyboard */; };
 		8C9D3E921FD9A14800821BEB /* Interactive_mapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9D3E911FD9A14800821BEB /* Interactive_mapTests.swift */; };
 		8C9D3E9D1FD9A14800821BEB /* Interactive_mapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9D3E9C1FD9A14800821BEB /* Interactive_mapUITests.swift */; };
+		8C9D3EAC1FD9A6E200821BEB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9D3EAB1FD9A6E200821BEB /* MapKit.framework */; };
+		8C9D3EB01FD9D6D700821BEB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9D3EAF1FD9D6D700821BEB /* CoreLocation.framework */; };
+		8C9D3EB61FDA1DC500821BEB /* dolphin.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C9D3EB51FDA1DC500821BEB /* dolphin.png */; };
+		8C9D3EB81FDA225A00821BEB /* pikachu.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C9D3EB71FDA225A00821BEB /* pikachu.png */; };
+		8C9D3EBA1FDA23B400821BEB /* dolphin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C9D3EB91FDA23B400821BEB /* dolphin.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		8C9D3E981FD9A14800821BEB /* Interactive mapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Interactive mapUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9D3E9C1FD9A14800821BEB /* Interactive_mapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactive_mapUITests.swift; sourceTree = "<group>"; };
 		8C9D3E9E1FD9A14800821BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C9D3EAB1FD9A6E200821BEB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8C9D3EAF1FD9D6D700821BEB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8C9D3EB51FDA1DC500821BEB /* dolphin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dolphin.png; sourceTree = "<group>"; };
+		8C9D3EB71FDA225A00821BEB /* pikachu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pikachu.png; sourceTree = "<group>"; };
+		8C9D3EB91FDA23B400821BEB /* dolphin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dolphin.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9D3EB01FD9D6D700821BEB /* CoreLocation.framework in Frameworks */,
+				8C9D3EAC1FD9A6E200821BEB /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +93,7 @@
 				8C9D3E901FD9A14800821BEB /* Interactive mapTests */,
 				8C9D3E9B1FD9A14800821BEB /* Interactive mapUITests */,
 				8C9D3E7A1FD9A14700821BEB /* Products */,
+				8C9D3EAA1FD9A6E200821BEB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +116,9 @@
 				8C9D3E831FD9A14800821BEB /* Assets.xcassets */,
 				8C9D3E851FD9A14800821BEB /* LaunchScreen.storyboard */,
 				8C9D3E881FD9A14800821BEB /* Info.plist */,
+				8C9D3EB51FDA1DC500821BEB /* dolphin.png */,
+				8C9D3EB71FDA225A00821BEB /* pikachu.png */,
+				8C9D3EB91FDA23B400821BEB /* dolphin.jpg */,
 			);
 			path = "Interactive map";
 			sourceTree = "<group>";
@@ -123,6 +139,15 @@
 				8C9D3E9E1FD9A14800821BEB /* Info.plist */,
 			);
 			path = "Interactive mapUITests";
+			sourceTree = "<group>";
+		};
+		8C9D3EAA1FD9A6E200821BEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C9D3EAF1FD9D6D700821BEB /* CoreLocation.framework */,
+				8C9D3EAB1FD9A6E200821BEB /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +257,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9D3EB61FDA1DC500821BEB /* dolphin.png in Resources */,
 				8C9D3E871FD9A14800821BEB /* LaunchScreen.storyboard in Resources */,
 				8C9D3E841FD9A14800821BEB /* Assets.xcassets in Resources */,
 				8C9D3E821FD9A14800821BEB /* Main.storyboard in Resources */,
+				8C9D3EBA1FDA23B400821BEB /* dolphin.jpg in Resources */,
+				8C9D3EB81FDA225A00821BEB /* pikachu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

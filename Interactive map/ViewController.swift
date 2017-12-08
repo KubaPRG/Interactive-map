@@ -10,56 +10,84 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
+{
     
-    class customPointAnnotation:MKPointAnnotation {
-        var imageName: String!
-    }
+    class CustomPointAnnotation: MKPointAnnotation {
+        var imageName: String! }
+    
     @IBOutlet weak var map: MKMapView!
     
-    let grewenHall = customPointAnnotation()
-    let manager = CLLocationManager()
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
-    {
-        let location = locations[0]
-        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.005, 0.005)
-        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-        let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
-        map.setRegion(region, animated: true)
-        
-        self.map.showsUserLocation = true
-    }
+    var grewenHall = CustomPointAnnotation()
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.requestWhenInUseAuthorization()
-        manager.startUpdatingLocation()
+        map.delegate = self
+        map.showsScale = true
+        map.showsPointsOfInterest = true
+        map.showsUserLocation = true
         
-        let grewenCoordinates = CLLocationCoordinate2DMake(43.0487734, -76.0875042)
-        grewenHall.coordinate = grewenCoordinates
+        locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+        
+        let sourceCoordinates = locationManager.location?.coordinate
+        let destCoordinates = CLLocationCoordinate2DMake(43.05, -76.09)
+        
+        let sourcePlacemark = MKPlacemark(coordinate: sourceCoordinates!)
+        let destPlacemark = MKPlacemark(coordinate: destCoordinates)
+        
+        let sourceItem = MKMapItem(placemark: sourcePlacemark)
+        let destItem = MKMapItem(placemark: destPlacemark)
+        
+        let directionRequest = MKDirectionsRequest()
+        directionRequest.source = sourceItem
+        directionRequest.destination = destItem
+        directionRequest.transportType = .any
+        
+        let directions = MKDirections(request: directionRequest)
+        directions.calculate(completionHandler: {
+            response, error in
+            guard let response = response else {
+                if error != nil {
+                    print("Something went wrong")
+                }
+                return
+            }
+            
+            let route = response.routes[0]
+            self.map.add(route.polyline, level: .aboveLabels) //aboveRoads
+            
+            let startPoint = route.polyline.boundingMapRect
+            self.map.setRegion(MKCoordinateRegionForMapRect(startPoint), animated: true)
+            
+        })
+        
+        let grewenCoordinaes = CLLocationCoordinate2DMake(43.0487734, -76.0875042)
+        grewenHall.coordinate = grewenCoordinaes
         grewenHall.title = "Grewen Hall"
-        grewenHall.imageName = "dolphin.jpg"
-        //grewenHall.subtitle = ""
-        
-        //grewenAnnotation.image = UIImage(named: "dolphin.jpg")
+        grewenHall.imageName = "phin.png"
         map.addAnnotation(grewenHall)
         
     }
     
-    func map(_ map: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?
     {
         if !(annotation is MKPointAnnotation) {
             print("NOT REGISTERED AS MKPOINTANNOTATION")
             return nil
         }
         
-        var annotationView = map.dequeueReusableAnnotationView(withIdentifier: "stationId")
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "stationIdentitfier")
         if annotationView == nil {
-            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "stationId")
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "stationIdentitfier")
             annotationView!.canShowCallout = true
         }
             
@@ -67,16 +95,23 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             annotationView!.annotation = annotation
         }
         
-        let cpa = annotation as! customPointAnnotation
+        let cpa = annotation as! CustomPointAnnotation
         annotationView!.image = UIImage(named: cpa.imageName)
         
         return annotationView
     }
-
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor = UIColor.blue
+        renderer.lineWidth = 5.0
+        
+        return renderer
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-
+    
 }
-

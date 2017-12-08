@@ -25,7 +25,11 @@
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Hey, I want to know where you are!</string>
+	<string>Location is required.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Location is required.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Location is required.</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

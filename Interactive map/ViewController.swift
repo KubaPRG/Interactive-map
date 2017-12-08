@@ -10,6 +10,8 @@ import UIKit
 import MapKit
 import CoreLocation
 
+print("lol")
+
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
 {
     

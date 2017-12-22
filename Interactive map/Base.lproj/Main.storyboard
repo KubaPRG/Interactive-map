@@ -171,7 +171,6 @@
         <scene sceneID="hjl-Bx-Vsx">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XVT-4h-rtw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="9VW-Yq-aq8"/>
                 <viewController id="hq5-QW-LHY" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MHN-gG-bKU"/>
@@ -183,6 +182,10 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="autumn-bike-new" translatesAutoresizingMaskIntoConstraints="NO" id="Jm9-wK-gHT">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Vd1-Dw-EUy" appends="YES" id="yvW-7j-sOD"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9I6-LI-B4C">
                                 <rect key="frame" x="31" y="350" width="313" height="50"/>
@@ -222,14 +225,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="@lemoyne.edu" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="DZJ-bn-yBB">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="@lemoyne.edu" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="DZJ-bn-yBB">
                                 <rect key="frame" x="228" y="235" width="112" height="20"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRR-CP-gaV">
-                                <rect key="frame" x="146" y="617" width="83" height="30"/>
+                                <rect key="frame" x="197" y="617" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="hdn-LA-4aw"/>
@@ -241,24 +244,24 @@
                             <constraint firstItem="9I6-LI-B4C" firstAttribute="leading" secondItem="8Q1-b7-hCP" secondAttribute="leadingMargin" constant="15" id="1Q1-KW-rU3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="V6V-ve-AFq" secondAttribute="trailing" constant="15" id="3ud-B3-hC9"/>
                             <constraint firstItem="V6V-ve-AFq" firstAttribute="leading" secondItem="8Q1-b7-hCP" secondAttribute="leadingMargin" constant="15" id="6bR-Wc-TKc"/>
+                            <constraint firstItem="cMT-YV-tjp" firstAttribute="top" secondItem="dRR-CP-gaV" secondAttribute="bottom" constant="20" id="7yW-bO-1bS"/>
                             <constraint firstItem="cMT-YV-tjp" firstAttribute="top" secondItem="Jm9-wK-gHT" secondAttribute="bottom" id="C7m-V3-rr4"/>
                             <constraint firstItem="V6V-ve-AFq" firstAttribute="top" secondItem="MHN-gG-bKU" secondAttribute="bottom" constant="265" id="Cvm-bT-JJW"/>
                             <constraint firstItem="ScZ-vZ-HjF" firstAttribute="top" secondItem="MHN-gG-bKU" secondAttribute="bottom" constant="200" id="EMl-ok-l80"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dRR-CP-gaV" secondAttribute="trailing" constant="130" id="ES6-9H-1X4"/>
                             <constraint firstItem="DZJ-bn-yBB" firstAttribute="top" secondItem="MHN-gG-bKU" secondAttribute="bottom" constant="215" id="G0L-Am-F8Q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9I6-LI-B4C" secondAttribute="trailing" constant="15" id="IU2-UT-g3T"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dRR-CP-gaV" secondAttribute="trailing" constant="130" id="XCD-i9-BDD"/>
-                            <constraint firstItem="dRR-CP-gaV" firstAttribute="leading" secondItem="8Q1-b7-hCP" secondAttribute="leadingMargin" constant="130" id="dBp-Ua-U66"/>
                             <constraint firstItem="Jm9-wK-gHT" firstAttribute="leading" secondItem="8Q1-b7-hCP" secondAttribute="leading" id="jH3-QK-QIg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DZJ-bn-yBB" secondAttribute="trailing" constant="19" id="mvd-zm-2tR"/>
                             <constraint firstItem="Jm9-wK-gHT" firstAttribute="top" secondItem="MHN-gG-bKU" secondAttribute="bottom" id="nRL-z8-vWo"/>
                             <constraint firstAttribute="trailing" secondItem="Jm9-wK-gHT" secondAttribute="trailing" id="qQu-HN-K3K"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ScZ-vZ-HjF" secondAttribute="trailing" constant="15" id="sR0-FG-nQH"/>
-                            <constraint firstItem="cMT-YV-tjp" firstAttribute="top" secondItem="dRR-CP-gaV" secondAttribute="bottom" constant="20" id="uJq-vy-Yn4"/>
                             <constraint firstItem="9I6-LI-B4C" firstAttribute="top" secondItem="MHN-gG-bKU" secondAttribute="bottom" constant="330" id="vvC-73-htu"/>
                             <constraint firstItem="ScZ-vZ-HjF" firstAttribute="leading" secondItem="8Q1-b7-hCP" secondAttribute="leadingMargin" constant="15" id="xdw-TP-Ze0"/>
                         </constraints>
                     </view>
                 </viewController>
+                <tapGestureRecognizer id="Vd1-Dw-EUy"/>
             </objects>
             <point key="canvasLocation" x="-821.60000000000002" y="65.217391304347828"/>
         </scene>

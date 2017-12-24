@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hq5-QW-LHY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -141,9 +141,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="_login_button" destination="9I6-LI-B4C" id="Q58-Z9-LDm"/>
-                        <outlet property="_password" destination="V6V-ve-AFq" id="yur-ga-LSj"/>
-                        <outlet property="_username" destination="ScZ-vZ-HjF" id="kAP-aV-w1d"/>
                         <outlet property="buttonExitMenu" destination="1OC-Jf-Y59" id="wkX-Nm-ZxS"/>
                         <outlet property="buttonMenu" destination="YOy-dY-o7T" id="mcW-tJ-qIh"/>
                         <outlet property="buttonReserveDablon" destination="JYG-kx-bCj" id="SGn-fl-sc4"/>
@@ -167,108 +164,9 @@
             </objects>
             <point key="canvasLocation" x="-101.59999999999999" y="121.88905547226388"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="hjl-Bx-Vsx">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XVT-4h-rtw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="hq5-QW-LHY" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="MHN-gG-bKU"/>
-                        <viewControllerLayoutGuide type="bottom" id="cMT-YV-tjp"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8Q1-b7-hCP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="autumn-bike-new" translatesAutoresizingMaskIntoConstraints="NO" id="Jm9-wK-gHT">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Vd1-Dw-EUy" appends="YES" id="yvW-7j-sOD"/>
-                                </connections>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9I6-LI-B4C">
-                                <rect key="frame" x="31" y="350" width="313" height="50"/>
-                                <color key="backgroundColor" red="0.031286552549999999" green="0.46002113820000001" blue="0.95450109240000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="atD-qO-Cce"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <size key="titleShadowOffset" width="1" height="0.0"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="LoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ccd-yK-P8J"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="V6V-ve-AFq">
-                                <rect key="frame" x="31" y="285" width="313" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="FVP-Om-GDz"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="ScZ-vZ-HjF" customClass="MaxLengthTextField" customModule="Interactive_map" customModuleProvider="target">
-                                <rect key="frame" x="31" y="220" width="313" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="lo1-VE-BOf"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                        <integer key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="@lemoyne.edu" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="DZJ-bn-yBB">
-                                <rect key="frame" x="228" y="235" width="112" height="20"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRR-CP-gaV">
-                                <rect key="frame" x="197" y="617" width="32" height="30"/>
-                                <state key="normal" title="Next"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="hdn-LA-4aw"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="9I6-LI-B4C" firstAttribute="leading" secondItem="8Q1-b7-hCP" secondAttribute="leadingMargin" constant="15" id="1Q1-KW-rU3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="V6V-ve-AFq" secondAttribute="trailing" constant="15" id="3ud-B3-hC9"/>
-                            <constraint firstItem="V6V-ve-AFq" firstAttribute="leading" secondItem="8Q1-b7-hCP" secondAttribute="leadingMargin" constant="15" id="6bR-Wc-TKc"/>
-                            <constraint firstItem="cMT-YV-tjp" firstAttribute="top" secondItem="dRR-CP-gaV" secondAttribute="bottom" constant="20" id="7yW-bO-1bS"/>
-                            <constraint firstItem="cMT-YV-tjp" firstAttribute="top" secondItem="Jm9-wK-gHT" secondAttribute="bottom" id="C7m-V3-rr4"/>
-                            <constraint firstItem="V6V-ve-AFq" firstAttribute="top" secondItem="MHN-gG-bKU" secondAttribute="bottom" constant="265" id="Cvm-bT-JJW"/>
-                            <constraint firstItem="ScZ-vZ-HjF" firstAttribute="top" secondItem="MHN-gG-bKU" secondAttribute="bottom" constant="200" id="EMl-ok-l80"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dRR-CP-gaV" secondAttribute="trailing" constant="130" id="ES6-9H-1X4"/>
-                            <constraint firstItem="DZJ-bn-yBB" firstAttribute="top" secondItem="MHN-gG-bKU" secondAttribute="bottom" constant="215" id="G0L-Am-F8Q"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9I6-LI-B4C" secondAttribute="trailing" constant="15" id="IU2-UT-g3T"/>
-                            <constraint firstItem="Jm9-wK-gHT" firstAttribute="leading" secondItem="8Q1-b7-hCP" secondAttribute="leading" id="jH3-QK-QIg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="DZJ-bn-yBB" secondAttribute="trailing" constant="19" id="mvd-zm-2tR"/>
-                            <constraint firstItem="Jm9-wK-gHT" firstAttribute="top" secondItem="MHN-gG-bKU" secondAttribute="bottom" id="nRL-z8-vWo"/>
-                            <constraint firstAttribute="trailing" secondItem="Jm9-wK-gHT" secondAttribute="trailing" id="qQu-HN-K3K"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ScZ-vZ-HjF" secondAttribute="trailing" constant="15" id="sR0-FG-nQH"/>
-                            <constraint firstItem="9I6-LI-B4C" firstAttribute="top" secondItem="MHN-gG-bKU" secondAttribute="bottom" constant="330" id="vvC-73-htu"/>
-                            <constraint firstItem="ScZ-vZ-HjF" firstAttribute="leading" secondItem="8Q1-b7-hCP" secondAttribute="leadingMargin" constant="15" id="xdw-TP-Ze0"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <tapGestureRecognizer id="Vd1-Dw-EUy"/>
-            </objects>
-            <point key="canvasLocation" x="-821.60000000000002" y="65.217391304347828"/>
-        </scene>
     </scenes>
     <resources>
         <image name="X" width="600" height="600"/>
-        <image name="autumn-bike-new" width="375" height="667"/>
         <image name="functions" width="768" height="768"/>
         <image name="reserve-dablon" width="320" height="80"/>
         <image name="reserve-grewen" width="320" height="80"/>

@@ -47,14 +47,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     let dablonCoordinates = CLLocationCoordinate2DMake(43.0498038, -76.0902384)
     let recCenterCoordinates = CLLocationCoordinate2DMake(43.0495897, -76.0853903)
     
-    // LOG IN SCREEN
-    
-    @IBOutlet var _username: MaxLengthTextField?
-    @IBOutlet var _password: UITextField?
-    @IBOutlet var _login_button: UIButton?
-    
-    
-    // END OF LOG IN SCREEN
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,10 +58,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         // LOG IN SCREEN
         
-        _password?.delegate = self
-        _password?.tag = 1
-        
-        
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         
@@ -80,17 +68,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
             //self._username.layer.borderWidth = 1
             //self._password.layer.borderWidth = 1
-        
-        let preferences = UserDefaults.standard
-        
-        if(preferences.object(forKey: "session") != nil)
-        {
-            LoginDone()
-        }
-        else
-        {
-            LoginToDo()
-        }
         
         
         // END OF LOG IN SCREEN
@@ -149,102 +126,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
     }
     
-    // LOG IN SCREEN
+    //Touch to exit keyboard
     
-    @IBAction func LoginButton(_ sender: Any) {
-        if(_login_button?.titleLabel?.text == "Logout")
-        {
-            let preferences = UserDefaults.standard
-            preferences.removeObject(forKey: "session")
-            
-            LoginToDo()
-            return
-        }
-        
-        
-        let username = _username?.text
-        let password = _password?.text
-        
-        if(username == "" || password == "")
-        {
-            return
-        }
-        
-        DoLogin(username!, password!)
-    }
-    
-    func DoLogin(_ user:String, _ psw:String)
-    {
-        let url = URL(string: "http://www.kaleidosblog.com/tutorial/login/get.txt")
-        let session = URLSession.shared
-        
-        let request = NSMutableURLRequest(url: url!)
-        request.httpMethod = "POST"
-        
-        let paramToSend = "username=" + user + "&password=" + psw
-        
-        request.httpBody = paramToSend.data(using: String.Encoding.utf8)
-        
-        
-        let task = session.dataTask(with: request as URLRequest, completionHandler: {
-            (data, response, error) in
-            
-            guard let _:Data = data else
-            {
-                return
-            }
-            
-            let json:Any?
-            
-            do
-            {
-                json = try JSONSerialization.jsonObject(with: data!, options: [])
-            }
-            catch
-            {
-                return
-            }
-            
-            
-            guard let server_response = json as? NSDictionary else
-            {
-                return
-            }
-            
-            
-            if let data_block = server_response["data"] as? NSDictionary
-            {
-                if let session_data = data_block["session"] as? String
-                {
-                    let preferences = UserDefaults.standard
-                    preferences.set(session_data, forKey: "session")
-                    
-                    DispatchQueue.main.async (
-                        execute:self.LoginDone
-                    )
-                }
-            }
-            
-        })
-        
-        task.resume()
-    }
-    
-    func LoginToDo()
-    {
-        _username?.isEnabled = true
-        _password?.isEnabled = true
-        
-        _login_button?.setTitle("Log In", for: .normal)
-    }
-    
-    func LoginDone()
-    {
-        _username?.isEnabled = false
-        _password?.isEnabled = false
-        
-        _login_button?.setTitle("Logout", for: .normal)
-    }
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
@@ -254,8 +137,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         textField.resignFirstResponder()
         return true
     }
-    
-    // END OF LOG IN SCREEN
     
     
     // ANNOTATION IMAGE + BUTTON
@@ -333,8 +214,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             buttonReserveRecCenter.isHidden = true
         }
 
+    
     // SLIDE-IN MENU
     
+    // Opens Background when button pressed
     @IBAction func openBg(_ sender: Any) {
         if (!menuShowing){
             darkBgConst.constant = 0
@@ -344,8 +227,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             buttonExitMenu.isHidden = false
         }
     }
-    // Opens Background when button pressed
     
+    // Closes Background when button pressed
     @IBAction func closeBg(_ sender: Any) {
         if (menuShowing) {
             darkBgConst.constant = 1000
@@ -354,8 +237,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
     }
     
-    // Closes Background when button pressed
-    
+    // Opens Menu when button pressed
     @IBAction func openMenu(_ sender: Any) {
     if (!menuShowing){
             menuLeadingConst.constant = 0
@@ -364,16 +246,16 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
         menuShowing = !menuShowing
     }
-    // Opens Menu when button pressed
     
+    // Closes Menu when button pressed
     @IBAction func closeMenu(_ sender: Any) {
         if (menuShowing) {
             menuLeadingConst.constant = -300
         }
         menuShowing = !menuShowing
     }
-    // Closes Menu when button pressed
     
+    // Closes menu when background tapped
     @IBAction func hideOnBgTap(_ sender: UIGestureRecognizer) {
         if (menuShowing) {
             menuLeadingConst.constant = -300
@@ -383,7 +265,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
         menuShowing = !menuShowing
     }
-    // Closes menu when background tapped
+    
     
     override func didReceiveMemoryWarning(){
         super.didReceiveMemoryWarning()}

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C8B94AC1FEC94B800DF83B6 /* MaxLengthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B94AB1FEC94B800DF83B6 /* MaxLengthTextField.swift */; };
 		8C9D3E7D1FD9A14700821BEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9D3E7C1FD9A14700821BEB /* AppDelegate.swift */; };
 		8C9D3E7F1FD9A14700821BEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9D3E7E1FD9A14700821BEB /* ViewController.swift */; };
 		8C9D3E821FD9A14800821BEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9D3E801FD9A14800821BEB /* Main.storyboard */; };
@@ -37,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8C8B94AB1FEC94B800DF83B6 /* MaxLengthTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxLengthTextField.swift; sourceTree = "<group>"; };
 		8C9D3E791FD9A14700821BEB /* Interactive map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Interactive map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9D3E7C1FD9A14700821BEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C9D3E7E1FD9A14700821BEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 				8C9D3E7C1FD9A14700821BEB /* AppDelegate.swift */,
 				8C9D3E7E1FD9A14700821BEB /* ViewController.swift */,
 				8C9D3E801FD9A14800821BEB /* Main.storyboard */,
-				8C8B94AB1FEC94B800DF83B6 /* MaxLengthTextField.swift */,
 				8C9D3E831FD9A14800821BEB /* Assets.xcassets */,
 				8C9D3E851FD9A14800821BEB /* LaunchScreen.storyboard */,
 				8C9D3E881FD9A14800821BEB /* Info.plist */,
@@ -280,7 +277,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C9D3E7F1FD9A14700821BEB /* ViewController.swift in Sources */,
-				8C8B94AC1FEC94B800DF83B6 /* MaxLengthTextField.swift in Sources */,
 				8C9D3E7D1FD9A14700821BEB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

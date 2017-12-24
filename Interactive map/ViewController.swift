@@ -47,7 +47,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     let dablonCoordinates = CLLocationCoordinate2DMake(43.0498038, -76.0902384)
     let recCenterCoordinates = CLLocationCoordinate2DMake(43.0495897, -76.0853903)
 
-    //kurwa
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

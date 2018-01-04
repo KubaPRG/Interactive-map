@@ -53,8 +53,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         super.viewDidLoad()
         
         let mySpan:MKCoordinateSpan = MKCoordinateSpanMake(0.005, 0.005)
-        let myLocation = self.locationManager.location?.coordinate
-        let myRegion:MKCoordinateRegion = MKCoordinateRegionMake(myLocation!, mySpan)
+        var myLocation = CLLocationCoordinate2DMake(43.0487734, -76.0875042)
+        let myActualLocation = self.locationManager.location?.coordinate
+        if myActualLocation != nil {
+            myLocation = myActualLocation!
+        }
+        let myRegion:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, mySpan)
         map.setRegion(myRegion, animated: true)
         
         // LOG IN SCREEN

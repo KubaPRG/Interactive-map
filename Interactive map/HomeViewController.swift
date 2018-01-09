@@ -258,6 +258,7 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
             buttonSignOut.isHidden = true
         }
         menuShowing = !menuShowing
+        print("background hidden")
     }
     
     @IBAction func didTapSignOut(_ sender: Any) {

@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIGestureRecognizerDelegate, UITextFieldDelegate{
+class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIGestureRecognizerDelegate, UITextFieldDelegate{
     class CustomPointAnnotation: MKPointAnnotation {
         var imageName: String!
     }
@@ -28,6 +28,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var buttonReserveDablon: UIButton!
     @IBOutlet weak var buttonReserveMitchell: UIButton!
     @IBOutlet weak var buttonReserveRecCenter: UIButton!
+    @IBOutlet weak var buttonSignOut: UIButton!
     
     @IBOutlet weak var buttonMenu: UIButton!
     @IBOutlet weak var buttonExitMenu: UIButton!
@@ -61,22 +62,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         let myRegion:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, mySpan)
         map.setRegion(myRegion, animated: true)
         
-        // LOG IN SCREEN
-        
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        
-            //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-        tap.cancelsTouchesInView = false
-        
-        view.addGestureRecognizer(tap)
-        
-            //self._username.layer.borderWidth = 1
-            //self._password.layer.borderWidth = 1
-        
-        
-        // END OF LOG IN SCREEN
-        
         
         buttonReserveGrewen.isHidden = true
         buttonReserveHarrison.isHidden = true
@@ -86,6 +71,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         buttonMenu.isHidden = false
         buttonExitMenu.isHidden = true
+        buttonSignOut.isHidden = true
         
         map.delegate = self
         map.showsScale = true
@@ -230,6 +216,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                 self.view.layoutIfNeeded()})
             buttonMenu.isHidden = true
             buttonExitMenu.isHidden = false
+            buttonSignOut.isHidden = false
         }
     }
     
@@ -238,6 +225,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         if (menuShowing) {
             darkBgConst.constant = 1000
             buttonExitMenu.isHidden = true
+            buttonSignOut.isHidden = true
             buttonMenu.isHidden = false
         }
     }
@@ -267,10 +255,16 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             darkBgConst.constant = 1000
             buttonMenu.isHidden = false
             buttonExitMenu.isHidden = true
+            buttonSignOut.isHidden = true
         }
         menuShowing = !menuShowing
     }
     
+    @IBAction func didTapSignOut(_ sender: Any) {
+        GIDSignIn.sharedInstance().signOut()
+        
+        print("The user has signed out.")
+    }
     
     override func didReceiveMemoryWarning(){
         super.didReceiveMemoryWarning()}

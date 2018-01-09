@@ -9,10 +9,74 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
+        <scene sceneID="Yj8-tF-5PM">
+            <objects>
+                <viewController storyboardIdentifier="LoginPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="idn-oF-6Ca" customClass="LoginViewController" customModule="Interactive_map" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HAr-Xd-F64"/>
+                        <viewControllerLayoutGuide type="bottom" id="AiD-9k-iQ4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zIN-Qs-NXl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRZ-NF-iT5" customClass="GIDSignInButton">
+                                <rect key="frame" x="76" y="562" width="223" height="35"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="NzN-Fe-J5U"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AiD-9k-iQ4" firstAttribute="top" secondItem="ZRZ-NF-iT5" secondAttribute="bottom" constant="70" id="NyR-WS-LaB"/>
+                            <constraint firstItem="ZRZ-NF-iT5" firstAttribute="leading" secondItem="zIN-Qs-NXl" secondAttribute="leadingMargin" constant="60" id="f37-Fb-yTa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZRZ-NF-iT5" secondAttribute="trailing" constant="60" id="mUx-Hi-otu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2B-qa-s5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-882.39999999999998" y="118.29085457271366"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="y7v-Da-YvV">
+            <objects>
+                <viewController storyboardIdentifier="TutorialPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="96P-w4-2xH" customClass="TutorialViewController" customModule="Interactive_map" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Flt-ix-8Bo"/>
+                        <viewControllerLayoutGuide type="bottom" id="53j-4m-Oig"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YyC-Ou-ZLr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9x3-hY-URk">
+                                <rect key="frame" x="139" y="318" width="96" height="30"/>
+                                <state key="normal" title="Finish Tutorial"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="koF-Cr-sWx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9x3-hY-URk" firstAttribute="centerY" secondItem="YyC-Ou-ZLr" secondAttribute="centerY" id="p47-xf-Qjl"/>
+                            <constraint firstItem="9x3-hY-URk" firstAttribute="centerX" secondItem="YyC-Ou-ZLr" secondAttribute="centerX" id="wef-Qo-lPr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fte-et-Wl2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-542" y="-653"/>
+        </scene>
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Interactive_map" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomePage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Interactive_map" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -106,6 +170,14 @@
                                     <action selector="closeMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pzU-IB-2r4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elW-9z-f6m">
+                                <rect key="frame" x="-220" y="577" width="60" height="30"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="didTapSignOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3SH-z2-tAP"/>
+                                    <segue destination="idn-oF-6Ca" kind="presentation" id="Vda-HA-Zq6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -115,10 +187,12 @@
                             <constraint firstItem="s2P-XU-IBc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="FE7-0p-q2m"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xIH-pz-6C2" secondAttribute="bottom" id="IPX-Bl-n1Y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JYG-kx-bCj" secondAttribute="trailing" constant="12" id="JpI-ct-A3d"/>
+                            <constraint firstItem="elW-9z-f6m" firstAttribute="leading" secondItem="Lj3-X2-BBA" secondAttribute="trailing" constant="-160" id="LlQ-V1-kcQ"/>
                             <constraint firstItem="7Fx-Jj-VyR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="Q0j-II-U62"/>
                             <constraint firstItem="6J9-Qt-14W" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="RUH-Xg-hfh"/>
                             <constraint firstItem="Z8Z-f4-kPu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="Shz-Ci-7ac"/>
                             <constraint firstAttribute="trailingMargin" secondItem="a7b-b4-xih" secondAttribute="trailing" constant="12" id="TJT-si-UoN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="elW-9z-f6m" secondAttribute="bottom" constant="60" id="Tws-JO-LpV"/>
                             <constraint firstItem="6J9-Qt-14W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="1000" id="U0F-aJ-Akt"/>
                             <constraint firstItem="YOy-dY-o7T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="VsF-gf-ccG"/>
                             <constraint firstItem="Lj3-X2-BBA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="W9i-Ga-vjP"/>
@@ -148,6 +222,7 @@
                         <outlet property="buttonReserveHarrison" destination="s2P-XU-IBc" id="5OG-UL-x36"/>
                         <outlet property="buttonReserveMitchell" destination="7Fx-Jj-VyR" id="WyR-e4-CLy"/>
                         <outlet property="buttonReserveRecCenter" destination="a7b-b4-xih" id="abN-wE-DZK"/>
+                        <outlet property="buttonSignOut" destination="elW-9z-f6m" id="Jd4-Ul-MFq"/>
                         <outlet property="darkBg" destination="6J9-Qt-14W" id="AlE-EZ-ZK4"/>
                         <outlet property="darkBgConst" destination="U0F-aJ-Akt" id="MXz-Fm-uXV"/>
                         <outlet property="map" destination="xIH-pz-6C2" id="gin-9j-10l"/>

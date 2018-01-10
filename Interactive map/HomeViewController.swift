@@ -244,6 +244,8 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     @IBAction func closeMenu(_ sender: Any) {
         if (menuShowing) {
             menuLeadingConst.constant = -300
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()})
         }
         menuShowing = !menuShowing
     }
@@ -251,14 +253,18 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     // Closes menu when background tapped
     @IBAction func hideOnBgTap(_ sender: UIGestureRecognizer) {
         if (menuShowing) {
-            menuLeadingConst.constant = -300
+            func hideMenu(){
+                menuLeadingConst.constant = -300
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.view.layoutIfNeeded()})
+            }
+            hideMenu()
             darkBgConst.constant = 1000
             buttonMenu.isHidden = false
             buttonExitMenu.isHidden = true
             buttonSignOut.isHidden = true
         }
         menuShowing = !menuShowing
-        print("background hidden")
     }
     
     @IBAction func didTapSignOut(_ sender: Any) {

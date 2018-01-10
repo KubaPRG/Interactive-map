@@ -48,10 +48,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             if user.hostedDomain != "lemoyne.edu" {
                 GIDSignIn.sharedInstance().signOut()
                 print("The user used an email that is not @lemoyne.edu")
-                //TODO: Notify the user to use a lemoyne.edu email + redirect to login screen
+                
+                //Notify the user to use a lemoyne.edu email
+                let alert = UIAlertController(title: "Unauthorized User", message:"Please use a lemoyne.edu email.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                if let loginPage = sb.instantiateViewController(withIdentifier: "LoginPage") as? UIViewController {
+                    window?.rootViewController = loginPage}
+                self.window?.rootViewController?.present(alert, animated: true, completion: nil)
             } else {
                 print("Wow, our user signed-in! User: \(user)")
-                
                 
                 let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
                 if launchedBefore  {

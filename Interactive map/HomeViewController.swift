@@ -220,16 +220,6 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         }
     }
     
-    // Closes Background when button pressed
-    @IBAction func closeBg(_ sender: Any) {
-        if (menuShowing) {
-            darkBgConst.constant = 1000
-            buttonExitMenu.isHidden = true
-            buttonSignOut.isHidden = true
-            buttonMenu.isHidden = false
-        }
-    }
-    
     // Opens Menu when button pressed
     @IBAction func openMenu(_ sender: Any) {
     if (!menuShowing){
@@ -243,28 +233,43 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     // Closes Menu when button pressed
     @IBAction func closeMenu(_ sender: Any) {
         if (menuShowing) {
-            menuLeadingConst.constant = -300
-            UIView.animate(withDuration: 0.3, animations: {
-                self.view.layoutIfNeeded()})
+            hideMenu()
         }
         menuShowing = !menuShowing
     }
     
-    // Closes menu when background tapped
+    // Closes Background when button pressed
+    @IBAction func closeBg(_ sender: Any) {
+        if (menuShowing) {
+            hideBg()
+            buttonExitMenu.isHidden = true
+            buttonSignOut.isHidden = true
+            buttonMenu.isHidden = false
+        }
+    }
+    
+    // Closes menu & Bg when background tapped
     @IBAction func hideOnBgTap(_ sender: UIGestureRecognizer) {
         if (menuShowing) {
-            func hideMenu(){
-                menuLeadingConst.constant = -300
-                UIView.animate(withDuration: 0.3, animations: {
-                    self.view.layoutIfNeeded()})
-            }
+            hideBg()
             hideMenu()
-            darkBgConst.constant = 1000
             buttonMenu.isHidden = false
             buttonExitMenu.isHidden = true
             buttonSignOut.isHidden = true
         }
         menuShowing = !menuShowing
+    }
+    
+    func hideMenu(){
+        menuLeadingConst.constant = -300
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.layoutIfNeeded()})
+    }
+    
+    func hideBg(){
+        darkBgConst.constant = 1000
+        UIView.animate(withDuration: 0.0, animations: {
+            self.view.layoutIfNeeded()})
     }
     
     @IBAction func didTapSignOut(_ sender: Any) {

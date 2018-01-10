@@ -5,11 +5,13 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="AmericanTypewriter.ttc">
+            <string>AmericanTypewriter-Bold</string>
             <string>AmericanTypewriter-Semibold</string>
         </array>
     </customFonts>
@@ -242,11 +244,12 @@
                                     <outletCollection property="gestureRecognizers" destination="xWW-He-N4E" appends="YES" id="bsI-OX-vnr"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lj3-X2-BBA">
-                                <rect key="frame" x="-300" y="0.0" width="240" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lj3-X2-BBA">
+                                <rect key="frame" x="0.0" y="0.0" width="260" height="667"/>
+                                <color key="backgroundColor" red="0.24118205904960632" green="0.44567662477493286" blue="0.081566743552684784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="5ZK-qE-0ou"/>
+                                    <constraint firstAttribute="width" constant="260" id="5ZK-qE-0ou"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOy-dY-o7T">
@@ -273,13 +276,72 @@
                                     <action selector="closeMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pzU-IB-2r4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elW-9z-f6m">
-                                <rect key="frame" x="-220" y="577" width="60" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paP-Ec-qwx">
+                                <rect key="frame" x="93" y="172" width="74" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="AZ5-qp-YvT"/>
+                                    <constraint firstAttribute="height" constant="43" id="OJy-iX-l7Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ss-kl-Efm">
+                                <rect key="frame" x="92" y="311.5" width="74" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="BCd-qk-rxP"/>
+                                    <constraint firstAttribute="height" constant="44" id="CGs-UG-xGB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                <state key="normal" title="Help">
+                                    <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93u-th-ujh">
+                                <rect key="frame" x="92" y="381.5" width="76" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8Vr-GY-fez"/>
+                                    <constraint firstAttribute="width" constant="76" id="VPv-QU-LyH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                <state key="normal" title="About">
+                                    <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmV-tt-zr0">
+                                <rect key="frame" x="78" y="451.5" width="104" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="9fV-N1-o3M"/>
+                                    <constraint firstAttribute="height" constant="44" id="npf-0b-M8B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elW-9z-f6m">
+                                <rect key="frame" x="100" y="597" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="N54-z4-9hP"/>
+                                    <constraint firstAttribute="width" constant="60" id="mt9-Wl-0yk"/>
+                                </constraints>
                                 <state key="normal" title="Sign Out"/>
                                 <connections>
                                     <action selector="didTapSignOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3SH-z2-tAP"/>
                                     <segue destination="idn-oF-6Ca" kind="presentation" id="Vda-HA-Zq6"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMZ-U0-om0">
+                                <rect key="frame" x="50" y="242" width="160" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="fNS-wo-2DY"/>
+                                    <constraint firstAttribute="height" constant="43" id="wAk-Bw-ZKU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                <state key="normal" title="Report Issue">
+                                    <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -289,12 +351,15 @@
                             <constraint firstItem="a7b-b4-xih" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="5KK-xm-NpJ"/>
                             <constraint firstAttribute="bottom" secondItem="xIH-pz-6C2" secondAttribute="bottom" id="6UZ-qd-Vp3"/>
                             <constraint firstItem="s2P-XU-IBc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="FE7-0p-q2m"/>
+                            <constraint firstItem="6ss-kl-Efm" firstAttribute="leading" secondItem="Lj3-X2-BBA" secondAttribute="trailingMargin" constant="-160" id="GGY-wd-2gI"/>
+                            <constraint firstItem="paP-Ec-qwx" firstAttribute="leading" secondItem="Lj3-X2-BBA" secondAttribute="trailing" constant="-167" id="GLb-Bb-COO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JYG-kx-bCj" secondAttribute="trailing" constant="12" id="JpI-ct-A3d"/>
                             <constraint firstItem="elW-9z-f6m" firstAttribute="leading" secondItem="Lj3-X2-BBA" secondAttribute="trailing" constant="-160" id="LlQ-V1-kcQ"/>
                             <constraint firstItem="7Fx-Jj-VyR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="Q0j-II-U62"/>
+                            <constraint firstItem="WMZ-U0-om0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-70" id="SdB-3z-3jn"/>
                             <constraint firstItem="Z8Z-f4-kPu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="Shz-Ci-7ac"/>
                             <constraint firstAttribute="trailingMargin" secondItem="a7b-b4-xih" secondAttribute="trailing" constant="12" id="TJT-si-UoN"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="elW-9z-f6m" secondAttribute="bottom" constant="60" id="Tws-JO-LpV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="elW-9z-f6m" secondAttribute="bottom" constant="40" id="Tws-JO-LpV"/>
                             <constraint firstItem="6J9-Qt-14W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="1000" id="U0F-aJ-Akt"/>
                             <constraint firstItem="xIH-pz-6C2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Uhw-ii-33D"/>
                             <constraint firstItem="YOy-dY-o7T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="VsF-gf-ccG"/>
@@ -305,13 +370,20 @@
                             <constraint firstAttribute="bottom" secondItem="6J9-Qt-14W" secondAttribute="bottom" id="aWx-W8-vC0"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a7b-b4-xih" secondAttribute="bottom" constant="20" id="bMs-AP-6pE"/>
                             <constraint firstItem="JYG-kx-bCj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="cEY-wF-m1Q"/>
+                            <constraint firstItem="cmV-tt-zr0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="140" id="cmg-3U-3ll"/>
+                            <constraint firstItem="cmV-tt-zr0" firstAttribute="leading" secondItem="Lj3-X2-BBA" secondAttribute="trailing" constant="-182" id="com-Nd-DKy"/>
+                            <constraint firstItem="paP-Ec-qwx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-140" id="eya-sy-Iut"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JYG-kx-bCj" secondAttribute="bottom" constant="20" id="gEJ-Fq-OGC"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z8Z-f4-kPu" secondAttribute="bottom" constant="20" id="ggW-rE-ney"/>
                             <constraint firstItem="1OC-Jf-Y59" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23" id="hKo-iD-LU7"/>
+                            <constraint firstItem="6ss-kl-Efm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iYC-js-NH2"/>
                             <constraint firstAttribute="trailing" secondItem="xIH-pz-6C2" secondAttribute="trailing" id="kDu-wo-5kY"/>
+                            <constraint firstItem="93u-th-ujh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="70" id="mYG-wR-hbq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Z8Z-f4-kPu" secondAttribute="trailing" constant="12" id="mtZ-O7-5h8"/>
+                            <constraint firstItem="WMZ-U0-om0" firstAttribute="leading" secondItem="Lj3-X2-BBA" secondAttribute="trailing" constant="-210" id="o4M-se-lLC"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7Fx-Jj-VyR" secondAttribute="bottom" constant="20" id="odE-xe-x3J"/>
                             <constraint firstAttribute="trailingMargin" secondItem="s2P-XU-IBc" secondAttribute="trailing" constant="12" id="pee-ik-uHR"/>
+                            <constraint firstItem="93u-th-ujh" firstAttribute="leading" secondItem="Lj3-X2-BBA" secondAttribute="trailing" constant="-168" id="rdp-q9-b8i"/>
                             <constraint firstItem="6J9-Qt-14W" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sFb-lC-8IO"/>
                             <constraint firstItem="1OC-Jf-Y59" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="tei-rq-awm"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="s2P-XU-IBc" secondAttribute="bottom" constant="20" id="uTz-3V-AaC"/>

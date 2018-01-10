@@ -62,6 +62,8 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         let myRegion:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, mySpan)
         map.setRegion(myRegion, animated: true)
         
+        menu.layer.shadowOpacity = 1
+        menu.layer.shadowRadius = 8
         
         buttonReserveGrewen.isHidden = true
         buttonReserveHarrison.isHidden = true

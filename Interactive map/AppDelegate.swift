@@ -31,8 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         print ("This is the sign-in status: \(signInStatus)")
         if signInStatus == true {
             let sb = UIStoryboard(name: "Main", bundle: nil)
-            if let mainPage = sb.instantiateViewController(withIdentifier: "HomePage") as? UIViewController {
-                window?.rootViewController = mainPage}
+            if let homePage = sb.instantiateViewController(withIdentifier: "HomePage") as? UIViewController {
+                window?.rootViewController = homePage}
         } else {
             let sb = UIStoryboard(name: "Main", bundle: nil)
             if let loginPage = sb.instantiateViewController(withIdentifier: "LoginPage") as? UIViewController {
@@ -61,7 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 
                 let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
                 if launchedBefore  {
-                    self.showMainPage()
+                    self.showHomePage()
                     print("This is not first launch.")
                 } else {
                     print("This is first launch.")
@@ -80,7 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         window!.rootViewController = sb.instantiateViewController(withIdentifier: "TutorialPage")
     }
     
-    func showMainPage(){
+    func showHomePage(){
         let sb = UIStoryboard(name: "Main", bundle: nil)
         window!.rootViewController = sb.instantiateViewController(withIdentifier: "HomePage")
     }

@@ -9,14 +9,17 @@
 import UIKit
 
 class TutorialViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-
+    
+    @IBAction func hide(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
 }
+

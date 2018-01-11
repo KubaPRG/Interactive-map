@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIGestureRecognizerDelegate, UITextFieldDelegate{
+class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIGestureRecognizerDelegate {
     class CustomPointAnnotation: MKPointAnnotation {
         var imageName: String!
     }
@@ -28,7 +28,6 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     @IBOutlet weak var buttonReserveDablon: UIButton!
     @IBOutlet weak var buttonReserveMitchell: UIButton!
     @IBOutlet weak var buttonReserveRecCenter: UIButton!
-    @IBOutlet weak var buttonSignOut: UIButton!
     
     @IBOutlet weak var buttonMenu: UIButton!
     @IBOutlet weak var buttonExitMenu: UIButton!
@@ -73,7 +72,6 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         
         buttonMenu.isHidden = false
         buttonExitMenu.isHidden = true
-        buttonSignOut.isHidden = true
         
         map.delegate = self
         map.showsScale = true
@@ -119,19 +117,6 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         
     }
     
-    //Touch to exit keyboard
-    
-    func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    
     // ANNOTATION IMAGE + BUTTON
     
     func mapView(_ mapView: MKMapView, viewFor picture: MKAnnotation) -> MKAnnotationView?
@@ -147,8 +132,8 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
             anView = MKAnnotationView(annotation: picture, reuseIdentifier: reuseId)
             anView!.canShowCallout = true
             
-            let grewenBtn = UIButton(type:.infoDark) as UIButton
-            anView!.rightCalloutAccessoryView = grewenBtn
+            let infoBtn = UIButton(type:.infoDark) as UIButton
+            anView!.rightCalloutAccessoryView = infoBtn
         }
         else {
             anView!.annotation = picture
@@ -218,7 +203,6 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
                 self.view.layoutIfNeeded()})
             buttonMenu.isHidden = true
             buttonExitMenu.isHidden = false
-            buttonSignOut.isHidden = false
         }
     }
     
@@ -245,7 +229,6 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         if (menuShowing) {
             hideBg()
             buttonExitMenu.isHidden = true
-            buttonSignOut.isHidden = true
             buttonMenu.isHidden = false
         }
     }
@@ -257,7 +240,6 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
             hideMenu()
             buttonMenu.isHidden = false
             buttonExitMenu.isHidden = true
-            buttonSignOut.isHidden = true
         }
         menuShowing = !menuShowing
     }

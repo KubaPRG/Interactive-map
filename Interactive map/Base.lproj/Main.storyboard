@@ -241,6 +241,7 @@
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="xWW-He-N4E" appends="YES" id="bsI-OX-vnr"/>
+                                    <outletCollection property="gestureRecognizers" destination="uCq-x9-Fhe" appends="YES" id="31W-FS-R9O"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lj3-X2-BBA">
@@ -252,6 +253,9 @@
                                         <state key="normal" title="Home">
                                             <color key="titleColor" red="0.73172837495803833" green="0.68572419881820679" blue="0.13252037763595581" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="homeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T10-6u-M1Y"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfr-R9-08P">
                                         <rect key="frame" x="50" y="172" width="160" height="43"/>
@@ -320,6 +324,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.24118205904960632" green="0.44567662477493286" blue="0.081566743552684784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="Nfr-R9-08P" firstAttribute="centerY" secondItem="Lj3-X2-BBA" secondAttribute="centerY" constant="-140" id="0rJ-BU-xUC"/>
                                     <constraint firstItem="lsT-47-zh9" firstAttribute="centerY" secondItem="Lj3-X2-BBA" secondAttribute="centerY" constant="140" id="3IA-ox-Ew2"/>
@@ -337,6 +342,9 @@
                                     <constraint firstItem="Hd3-5w-1wv" firstAttribute="centerY" secondItem="Lj3-X2-BBA" secondAttribute="centerY" id="vn7-WJ-e6U"/>
                                     <constraint firstItem="lsT-47-zh9" firstAttribute="centerX" secondItem="Lj3-X2-BBA" secondAttribute="centerX" id="wVl-PS-2ol"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="czK-MS-ZcW" appends="YES" id="BOF-f9-zx2"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOy-dY-o7T">
                                 <rect key="frame" x="10" y="38" width="50" height="40"/>
@@ -358,7 +366,6 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="X"/>
                                 <connections>
-                                    <action selector="closeBg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Dr-mp-djI"/>
                                     <action selector="closeMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pzU-IB-2r4"/>
                                 </connections>
                             </button>
@@ -417,6 +424,16 @@
                         <action selector="hideOnBgTap:" destination="BYZ-38-t0r" id="wsD-jv-4eq"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="uCq-x9-Fhe">
+                    <connections>
+                        <action selector="bgSwipeLeft:" destination="BYZ-38-t0r" id="lUD-aU-fMN"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="czK-MS-ZcW">
+                    <connections>
+                        <action selector="menuSwipeLeft:" destination="BYZ-38-t0r" id="SwS-sP-ODa"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-7" y="118"/>
         </scene>
@@ -441,6 +458,7 @@
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="cmc-hb-9RX" appends="YES" id="SOs-FT-woF"/>
+                                    <outletCollection property="gestureRecognizers" destination="lvo-J8-9lv" appends="YES" id="MCY-yK-4Qt"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V8x-4p-iFT">
@@ -462,6 +480,9 @@
                                         <state key="normal" title="Report Issue">
                                             <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="reportIssueButtonPressed:" destination="cZt-ls-Zek" eventType="touchUpInside" id="zlJ-Ig-5Vp"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJr-MU-TPg">
                                         <rect key="frame" x="100" y="312" width="60" height="43"/>
@@ -520,6 +541,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.241182059" green="0.44567662479999998" blue="0.081566743550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="81u-9T-TMR" firstAttribute="centerX" secondItem="V8x-4p-iFT" secondAttribute="centerX" id="2OZ-bN-wu3"/>
                                     <constraint firstItem="Ah4-I9-XPc" firstAttribute="centerY" secondItem="V8x-4p-iFT" secondAttribute="centerY" constant="-70" id="5yZ-cB-UYu"/>
@@ -537,6 +559,9 @@
                                     <constraint firstItem="pJr-MU-TPg" firstAttribute="centerX" secondItem="V8x-4p-iFT" secondAttribute="centerX" id="bYt-pf-wkB"/>
                                     <constraint firstItem="RDU-Oi-sro" firstAttribute="centerX" secondItem="V8x-4p-iFT" secondAttribute="centerX" id="oPp-RN-gBb"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ntl-KW-X7o" appends="YES" id="3DQ-Av-9aU"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81c-XU-4ij">
                                 <rect key="frame" x="10" y="38" width="50" height="40"/>
@@ -558,7 +583,6 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="X"/>
                                 <connections>
-                                    <action selector="closeBg:" destination="cZt-ls-Zek" eventType="touchUpInside" id="hYJ-ik-d9h"/>
                                     <action selector="closeMenu:" destination="cZt-ls-Zek" eventType="touchUpInside" id="vOc-z9-oeH"/>
                                 </connections>
                             </button>
@@ -591,6 +615,16 @@
                         <action selector="hideOnBgTap:" destination="cZt-ls-Zek" id="tef-ao-wm6"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="lvo-J8-9lv">
+                    <connections>
+                        <action selector="bgSwipeLeft:" destination="cZt-ls-Zek" id="AxJ-0r-Akb"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="ntl-KW-X7o">
+                    <connections>
+                        <action selector="menuSwipeLeft:" destination="cZt-ls-Zek" id="l55-tO-gAb"/>
+                    </connections>
+                </swipeGestureRecognizer>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Peo-ST-Vo7" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="889" y="118"/>
@@ -616,6 +650,7 @@
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="vaG-JK-SF1" appends="YES" id="wnE-E4-atd"/>
+                                    <outletCollection property="gestureRecognizers" destination="oy1-oU-AMc" appends="YES" id="f8u-TA-Eg2"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kS4-P1-AOv">
@@ -657,6 +692,9 @@
                                         <state key="normal" title="Settings">
                                             <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="settingsButtonPressed:" destination="CUv-f1-9P7" eventType="touchUpInside" id="rrk-2c-KVf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTh-qJ-0ds">
                                         <rect key="frame" x="76" y="452" width="108" height="43"/>
@@ -695,6 +733,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.241182059" green="0.44567662479999998" blue="0.081566743550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="KTh-qJ-0ds" firstAttribute="centerX" secondItem="kS4-P1-AOv" secondAttribute="centerX" id="0pt-ZW-4fo"/>
                                     <constraint firstAttribute="width" constant="260" id="3FU-5D-Acw"/>
@@ -712,6 +751,9 @@
                                     <constraint firstItem="d4x-Qg-NGn" firstAttribute="centerY" secondItem="kS4-P1-AOv" secondAttribute="centerY" constant="70" id="kkp-M5-w4P"/>
                                     <constraint firstItem="eRC-fN-d8A" firstAttribute="centerY" secondItem="kS4-P1-AOv" secondAttribute="centerY" constant="-70" id="xyY-4f-0kg"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="JKG-4A-JzB" appends="YES" id="RvE-tT-llt"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdA-QI-Lvf">
                                 <rect key="frame" x="10" y="38" width="50" height="40"/>
@@ -733,7 +775,6 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="X"/>
                                 <connections>
-                                    <action selector="closeBg:" destination="CUv-f1-9P7" eventType="touchUpInside" id="4Vi-30-Ndc"/>
                                     <action selector="closeMenu:" destination="CUv-f1-9P7" eventType="touchUpInside" id="Pzu-Fo-VJb"/>
                                 </connections>
                             </button>
@@ -766,6 +807,16 @@
                         <action selector="hideOnBgTap:" destination="CUv-f1-9P7" id="ECy-0h-Sf9"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="oy1-oU-AMc">
+                    <connections>
+                        <action selector="bgSwipeLeft:" destination="CUv-f1-9P7" id="5xS-RL-afI"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="JKG-4A-JzB">
+                    <connections>
+                        <action selector="menuSwipeLeft:" destination="CUv-f1-9P7" id="N0w-77-Hw2"/>
+                    </connections>
+                </swipeGestureRecognizer>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OjU-XX-Vyo" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-7" y="-717"/>
@@ -848,12 +899,12 @@
         <image name="reserve-reccenter" width="319" height="79"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="neF-oB-V5I"/>
-        <segue reference="r5N-05-Uv8"/>
-        <segue reference="Fv6-LB-iXI"/>
-        <segue reference="jOc-eU-TuK"/>
-        <segue reference="dlm-G7-kth"/>
-        <segue reference="TgV-1z-ImP"/>
-        <segue reference="lav-0R-bXB"/>
+        <segue reference="nRp-dZ-XuO"/>
+        <segue reference="dax-nv-qYI"/>
+        <segue reference="ul7-Se-MvY"/>
+        <segue reference="BdG-6s-wFZ"/>
+        <segue reference="AEU-2o-KKl"/>
+        <segue reference="Ttf-TW-pwE"/>
+        <segue reference="r0y-R2-VSX"/>
     </inferredMetricsTieBreakers>
 </document>

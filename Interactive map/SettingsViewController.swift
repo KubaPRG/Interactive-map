@@ -55,33 +55,32 @@ class SettingsViewController: UIViewController, UIGestureRecognizerDelegate {
         menuShowing = !menuShowing
     }
     
-    // Closes Menu when button pressed
+    // Closes Menu & Bg when Exit button pressed
     @IBAction func closeMenu(_ sender: Any) {
-        if (menuShowing) {
-            hideMenu()
-        }
-        menuShowing = !menuShowing
+        hideBoth()
     }
     
-    // Closes Background when button pressed
-    @IBAction func closeBg(_ sender: Any) {
-        if (menuShowing) {
-            hideBg()
-            buttonExitMenu.isHidden = true
-            buttonMenu.isHidden = false
-        }
+    // Closes Menu & Bg when Settings Pressed
+    @IBAction func settingsButtonPressed(_ sender: Any) {
+        hideBoth()
     }
     
-    // Closes menu & Bg when background tapped
+    // Closes Menu & Bg when background tapped
     @IBAction func hideOnBgTap(_ sender: UIGestureRecognizer) {
-        if (menuShowing) {
-            hideBg()
-            hideMenu()
-            buttonMenu.isHidden = false
-            buttonExitMenu.isHidden = true
-        }
-        menuShowing = !menuShowing
+        hideBoth()
     }
+    
+    // Closes Menu & Bg through left swipes
+    
+    @IBAction func bgSwipeLeft(_ sender: Any) {
+        hideBoth()
+    }
+    
+    @IBAction func menuSwipeLeft(_ sender: Any) {
+        hideBoth()
+    }
+    
+    // Recycled Closing Menu
     
     func hideMenu(){
         menuLeadingConst.constant = -300
@@ -93,6 +92,16 @@ class SettingsViewController: UIViewController, UIGestureRecognizerDelegate {
         darkBgConst.constant = 1000
         UIView.animate(withDuration: 0.0, animations: {
             self.view.layoutIfNeeded()})
+    }
+    
+    func hideBoth(){
+        if (menuShowing) {
+            hideBg()
+            hideMenu()
+            buttonMenu.isHidden = false
+            buttonExitMenu.isHidden = true
+        }
+        menuShowing = !menuShowing
     }
     
     //Sign Out

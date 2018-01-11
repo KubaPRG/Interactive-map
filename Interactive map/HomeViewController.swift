@@ -46,11 +46,19 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     let mitchellCoordinates = CLLocationCoordinate2DMake(43.0468909, -76.0858275)
     let dablonCoordinates = CLLocationCoordinate2DMake(43.0498038, -76.0902384)
     let recCenterCoordinates = CLLocationCoordinate2DMake(43.0495897, -76.0853903)
-
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
         
         let mySpan:MKCoordinateSpan = MKCoordinateSpanMake(0.005, 0.005)
         var myLocation = CLLocationCoordinate2DMake(43.0487734, -76.0875042)
@@ -78,16 +86,6 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         map.showsPointsOfInterest = true
         map.showsUserLocation = true
         map.showAnnotations(map.annotations, animated: true)
-        
-        locationManager.requestAlwaysAuthorization()
-        locationManager.requestWhenInUseAuthorization()
-        
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
-        }
-        
         
         
         grewenHall.coordinate = grewenCoordinates
@@ -216,33 +214,32 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         menuShowing = !menuShowing
     }
     
-    // Closes Menu when button pressed
+    // Closes Menu & Bg when Exit button pressed
     @IBAction func closeMenu(_ sender: Any) {
-        if (menuShowing) {
-            hideMenu()
-        }
-        menuShowing = !menuShowing
+        hideBoth()
     }
     
-    // Closes Background when button pressed
-    @IBAction func closeBg(_ sender: Any) {
-        if (menuShowing) {
-            hideBg()
-            buttonExitMenu.isHidden = true
-            buttonMenu.isHidden = false
-        }
+    // Closes Menu & Bg when Home pressed
+    @IBAction func homeButtonPressed(_ sender: Any) {
+        hideBoth()
     }
     
-    // Closes menu & Bg when background tapped
+    // Closes Menu & Bg when background tapped
     @IBAction func hideOnBgTap(_ sender: UIGestureRecognizer) {
-        if (menuShowing) {
-            hideBg()
-            hideMenu()
-            buttonMenu.isHidden = false
-            buttonExitMenu.isHidden = true
-        }
-        menuShowing = !menuShowing
+        hideBoth()
     }
+    
+    // Closes Menu & Bg through left swipes
+    
+    @IBAction func bgSwipeLeft(_ sender: Any) {
+        hideBoth()
+    }
+    
+    @IBAction func menuSwipeLeft(_ sender: Any) {
+        hideBoth()
+    }
+    
+    // Recycled Closing Menu
     
     func hideMenu(){
         menuLeadingConst.constant = -300
@@ -254,6 +251,16 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         darkBgConst.constant = 1000
         UIView.animate(withDuration: 0.0, animations: {
             self.view.layoutIfNeeded()})
+    }
+    
+    func hideBoth(){
+        if (menuShowing) {
+            hideBg()
+            hideMenu()
+            buttonMenu.isHidden = false
+            buttonExitMenu.isHidden = true
+        }
+        menuShowing = !menuShowing
     }
     
     //Sign Out

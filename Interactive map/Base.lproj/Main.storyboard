@@ -175,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fte-et-Wl2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-882" y="-690"/>
+            <point key="canvasLocation" x="-882" y="985"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -247,14 +247,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="260" height="667"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GR0-6v-dv1">
-                                        <rect key="frame" x="93" y="172" width="74" height="43"/>
+                                        <rect key="frame" x="93" y="102" width="74" height="43"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
                                         <state key="normal" title="Home">
                                             <color key="titleColor" red="0.73172837495803833" green="0.68572419881820679" blue="0.13252037763595581" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfr-R9-08P">
-                                        <rect key="frame" x="50" y="242" width="160" height="43"/>
+                                        <rect key="frame" x="50" y="172" width="160" height="43"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
                                         <state key="normal" title="Report Issue">
                                             <color key="titleColor" red="0.73172837495803833" green="0.68572419881820679" blue="0.13252037763595581" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -264,7 +264,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hd3-5w-1wv">
-                                        <rect key="frame" x="100" y="382" width="60" height="43"/>
+                                        <rect key="frame" x="100" y="312" width="60" height="43"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
                                         <state key="normal" title="Help">
                                             <color key="titleColor" red="0.73172837495803833" green="0.68572419881820679" blue="0.13252037763595581" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -274,7 +274,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFj-u7-y1c">
-                                        <rect key="frame" x="78" y="312" width="104" height="43"/>
+                                        <rect key="frame" x="78" y="242" width="104" height="43"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
                                         <state key="normal" title="Settings">
                                             <color key="titleColor" red="0.73172837495803833" green="0.68572419881820679" blue="0.13252037763595581" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -307,22 +307,34 @@
                                             <segue destination="idn-oF-6Ca" kind="presentation" id="Vda-HA-Zq6"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pa9-eL-88f">
+                                        <rect key="frame" x="70" y="382" width="121" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Feedback">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="yEq-22-f2L" kind="presentation" id="Mhr-6b-Rza"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.24118205904960632" green="0.44567662477493286" blue="0.081566743552684784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Nfr-R9-08P" firstAttribute="centerY" secondItem="Lj3-X2-BBA" secondAttribute="centerY" constant="-70" id="0rJ-BU-xUC"/>
+                                    <constraint firstItem="Nfr-R9-08P" firstAttribute="centerY" secondItem="Lj3-X2-BBA" secondAttribute="centerY" constant="-140" id="0rJ-BU-xUC"/>
                                     <constraint firstItem="lsT-47-zh9" firstAttribute="centerY" secondItem="Lj3-X2-BBA" secondAttribute="centerY" constant="140" id="3IA-ox-Ew2"/>
                                     <constraint firstAttribute="width" constant="260" id="5ZK-qE-0ou"/>
-                                    <constraint firstItem="GR0-6v-dv1" firstAttribute="centerY" secondItem="Lj3-X2-BBA" secondAttribute="centerY" constant="-140" id="6nO-ep-j1X"/>
+                                    <constraint firstItem="GR0-6v-dv1" firstAttribute="centerY" secondItem="Lj3-X2-BBA" secondAttribute="centerY" constant="-210" id="6nO-ep-j1X"/>
                                     <constraint firstItem="GFj-u7-y1c" firstAttribute="centerX" secondItem="Lj3-X2-BBA" secondAttribute="centerX" id="CBO-aE-eFV"/>
+                                    <constraint firstItem="pa9-eL-88f" firstAttribute="centerX" secondItem="Lj3-X2-BBA" secondAttribute="centerX" id="EoC-rh-3Ij"/>
                                     <constraint firstItem="Nfr-R9-08P" firstAttribute="centerX" secondItem="Lj3-X2-BBA" secondAttribute="centerX" id="W9D-Qu-J8J"/>
-                                    <constraint firstItem="GFj-u7-y1c" firstAttribute="centerY" secondItem="Lj3-X2-BBA" secondAttribute="centerY" id="YE8-O6-AhK"/>
+                                    <constraint firstItem="GFj-u7-y1c" firstAttribute="centerY" secondItem="Lj3-X2-BBA" secondAttribute="centerY" constant="-70" id="YE8-O6-AhK"/>
                                     <constraint firstItem="elW-9z-f6m" firstAttribute="centerX" secondItem="Lj3-X2-BBA" secondAttribute="centerX" id="bp1-ev-eIt"/>
                                     <constraint firstItem="Hd3-5w-1wv" firstAttribute="centerX" secondItem="Lj3-X2-BBA" secondAttribute="centerX" id="dNX-yo-vBI"/>
                                     <constraint firstAttribute="bottom" secondItem="elW-9z-f6m" secondAttribute="bottom" constant="40" id="i8T-zf-H5g"/>
+                                    <constraint firstItem="pa9-eL-88f" firstAttribute="centerY" secondItem="Lj3-X2-BBA" secondAttribute="centerY" constant="70" id="kqc-Mo-5bi"/>
                                     <constraint firstItem="GR0-6v-dv1" firstAttribute="centerX" secondItem="Lj3-X2-BBA" secondAttribute="centerX" id="uIY-Pz-zws"/>
-                                    <constraint firstItem="Hd3-5w-1wv" firstAttribute="centerY" secondItem="Lj3-X2-BBA" secondAttribute="centerY" constant="70" id="vn7-WJ-e6U"/>
+                                    <constraint firstItem="Hd3-5w-1wv" firstAttribute="centerY" secondItem="Lj3-X2-BBA" secondAttribute="centerY" id="vn7-WJ-e6U"/>
                                     <constraint firstItem="lsT-47-zh9" firstAttribute="centerX" secondItem="Lj3-X2-BBA" secondAttribute="centerX" id="wVl-PS-2ol"/>
                                 </constraints>
                             </view>
@@ -406,7 +418,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-101.59999999999999" y="121.88905547226388"/>
+            <point key="canvasLocation" x="-7" y="118"/>
         </scene>
         <!--Report Issue View Controller-->
         <scene sceneID="nib-US-NwZ">
@@ -435,7 +447,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="260" height="667"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81u-9T-TMR">
-                                        <rect key="frame" x="93" y="172" width="74" height="43"/>
+                                        <rect key="frame" x="93" y="102" width="74" height="43"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
                                         <state key="normal" title="Home">
                                             <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -445,14 +457,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8k-Mk-7bH">
-                                        <rect key="frame" x="50" y="242" width="160" height="43"/>
+                                        <rect key="frame" x="50" y="172" width="160" height="43"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
                                         <state key="normal" title="Report Issue">
                                             <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJr-MU-TPg">
-                                        <rect key="frame" x="100" y="382" width="60" height="43"/>
+                                        <rect key="frame" x="100" y="312" width="60" height="43"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
                                         <state key="normal" title="Help">
                                             <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -462,7 +474,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ah4-I9-XPc">
-                                        <rect key="frame" x="78" y="312" width="104" height="43"/>
+                                        <rect key="frame" x="78" y="242" width="104" height="43"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
                                         <state key="normal" title="Settings">
                                             <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -495,20 +507,32 @@
                                             <segue destination="idn-oF-6Ca" kind="presentation" id="r0y-R2-VSX"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wb-ox-dpy">
+                                        <rect key="frame" x="70" y="382" width="121" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Feedback">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="yEq-22-f2L" kind="presentation" id="nRp-dZ-XuO"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.241182059" green="0.44567662479999998" blue="0.081566743550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="81u-9T-TMR" firstAttribute="centerX" secondItem="V8x-4p-iFT" secondAttribute="centerX" id="2OZ-bN-wu3"/>
-                                    <constraint firstItem="Ah4-I9-XPc" firstAttribute="centerY" secondItem="V8x-4p-iFT" secondAttribute="centerY" id="5yZ-cB-UYu"/>
+                                    <constraint firstItem="Ah4-I9-XPc" firstAttribute="centerY" secondItem="V8x-4p-iFT" secondAttribute="centerY" constant="-70" id="5yZ-cB-UYu"/>
                                     <constraint firstAttribute="bottom" secondItem="RDU-Oi-sro" secondAttribute="bottom" constant="40" id="A1e-YG-aWo"/>
-                                    <constraint firstItem="z8k-Mk-7bH" firstAttribute="centerY" secondItem="V8x-4p-iFT" secondAttribute="centerY" constant="-70" id="FaH-D1-jBS"/>
+                                    <constraint firstItem="z8k-Mk-7bH" firstAttribute="centerY" secondItem="V8x-4p-iFT" secondAttribute="centerY" constant="-140" id="FaH-D1-jBS"/>
                                     <constraint firstAttribute="width" constant="260" id="Ir2-Na-Kuq"/>
                                     <constraint firstItem="Ah4-I9-XPc" firstAttribute="centerX" secondItem="V8x-4p-iFT" secondAttribute="centerX" id="J8v-HP-PWu"/>
-                                    <constraint firstItem="81u-9T-TMR" firstAttribute="centerY" secondItem="V8x-4p-iFT" secondAttribute="centerY" constant="-140" id="KqH-ve-EFe"/>
+                                    <constraint firstItem="81u-9T-TMR" firstAttribute="centerY" secondItem="V8x-4p-iFT" secondAttribute="centerY" constant="-210" id="KqH-ve-EFe"/>
+                                    <constraint firstItem="6wb-ox-dpy" firstAttribute="centerY" secondItem="V8x-4p-iFT" secondAttribute="centerY" constant="70" id="QhW-mk-7w1"/>
                                     <constraint firstItem="z8k-Mk-7bH" firstAttribute="centerX" secondItem="V8x-4p-iFT" secondAttribute="centerX" id="RnV-FW-KKq"/>
+                                    <constraint firstItem="6wb-ox-dpy" firstAttribute="centerX" secondItem="V8x-4p-iFT" secondAttribute="centerX" id="Stj-h1-tA9"/>
                                     <constraint firstItem="wMn-Xu-fDr" firstAttribute="centerX" secondItem="V8x-4p-iFT" secondAttribute="centerX" id="UMj-JN-XLr"/>
-                                    <constraint firstItem="pJr-MU-TPg" firstAttribute="centerY" secondItem="V8x-4p-iFT" secondAttribute="centerY" constant="70" id="WUo-b2-AM3"/>
+                                    <constraint firstItem="pJr-MU-TPg" firstAttribute="centerY" secondItem="V8x-4p-iFT" secondAttribute="centerY" id="WUo-b2-AM3"/>
                                     <constraint firstItem="wMn-Xu-fDr" firstAttribute="centerY" secondItem="V8x-4p-iFT" secondAttribute="centerY" constant="140" id="aMO-2r-ItB"/>
                                     <constraint firstItem="pJr-MU-TPg" firstAttribute="centerX" secondItem="V8x-4p-iFT" secondAttribute="centerX" id="bYt-pf-wkB"/>
                                     <constraint firstItem="RDU-Oi-sro" firstAttribute="centerX" secondItem="V8x-4p-iFT" secondAttribute="centerX" id="oPp-RN-gBb"/>
@@ -569,7 +593,7 @@
                 </tapGestureRecognizer>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Peo-ST-Vo7" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="889" y="-332"/>
+            <point key="canvasLocation" x="889" y="118"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="1lY-6H-crk">
@@ -598,7 +622,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="260" height="667"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xca-Wc-Tu1">
-                                        <rect key="frame" x="93" y="172" width="74" height="43"/>
+                                        <rect key="frame" x="93" y="102" width="74" height="43"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
                                         <state key="normal" title="Home">
                                             <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -608,7 +632,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixY-Rs-Pet">
-                                        <rect key="frame" x="50" y="242" width="160" height="43"/>
+                                        <rect key="frame" x="50" y="172" width="160" height="43"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
                                         <state key="normal" title="Report Issue">
                                             <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -618,7 +642,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTk-Cr-JED">
-                                        <rect key="frame" x="100" y="382" width="60" height="43"/>
+                                        <rect key="frame" x="100" y="312" width="60" height="43"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
                                         <state key="normal" title="Help">
                                             <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -628,7 +652,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRC-fN-d8A">
-                                        <rect key="frame" x="78" y="312" width="104" height="43"/>
+                                        <rect key="frame" x="78" y="242" width="104" height="43"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
                                         <state key="normal" title="Settings">
                                             <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -658,6 +682,16 @@
                                             <segue destination="idn-oF-6Ca" kind="presentation" id="lav-0R-bXB"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4x-Qg-NGn">
+                                        <rect key="frame" x="70" y="382" width="121" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Feedback">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="yEq-22-f2L" kind="presentation" id="neF-oB-V5I"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.241182059" green="0.44567662479999998" blue="0.081566743550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -666,15 +700,17 @@
                                     <constraint firstAttribute="width" constant="260" id="3FU-5D-Acw"/>
                                     <constraint firstItem="uTk-Cr-JED" firstAttribute="centerX" secondItem="kS4-P1-AOv" secondAttribute="centerX" id="3g8-ht-ctn"/>
                                     <constraint firstItem="eRC-fN-d8A" firstAttribute="centerX" secondItem="kS4-P1-AOv" secondAttribute="centerX" id="4vP-ay-V96"/>
-                                    <constraint firstItem="ixY-Rs-Pet" firstAttribute="centerY" secondItem="kS4-P1-AOv" secondAttribute="centerY" constant="-70" id="5HH-0y-1OP"/>
+                                    <constraint firstItem="ixY-Rs-Pet" firstAttribute="centerY" secondItem="kS4-P1-AOv" secondAttribute="centerY" constant="-140" id="5HH-0y-1OP"/>
+                                    <constraint firstItem="d4x-Qg-NGn" firstAttribute="centerX" secondItem="kS4-P1-AOv" secondAttribute="centerX" id="6A9-zA-yK4"/>
                                     <constraint firstItem="g0P-9c-tsx" firstAttribute="centerX" secondItem="kS4-P1-AOv" secondAttribute="centerX" id="9eL-RL-PmS"/>
-                                    <constraint firstItem="uTk-Cr-JED" firstAttribute="centerY" secondItem="kS4-P1-AOv" secondAttribute="centerY" constant="70" id="Hrp-Px-rLj"/>
+                                    <constraint firstItem="uTk-Cr-JED" firstAttribute="centerY" secondItem="kS4-P1-AOv" secondAttribute="centerY" id="Hrp-Px-rLj"/>
                                     <constraint firstItem="ixY-Rs-Pet" firstAttribute="centerX" secondItem="kS4-P1-AOv" secondAttribute="centerX" id="KRE-Q3-Ldn"/>
                                     <constraint firstItem="KTh-qJ-0ds" firstAttribute="centerY" secondItem="kS4-P1-AOv" secondAttribute="centerY" constant="140" id="LXR-Bd-rp4"/>
                                     <constraint firstAttribute="bottom" secondItem="g0P-9c-tsx" secondAttribute="bottom" constant="40" id="OjA-W8-r99"/>
-                                    <constraint firstItem="Xca-Wc-Tu1" firstAttribute="centerY" secondItem="kS4-P1-AOv" secondAttribute="centerY" constant="-140" id="VCX-8X-qUX"/>
+                                    <constraint firstItem="Xca-Wc-Tu1" firstAttribute="centerY" secondItem="kS4-P1-AOv" secondAttribute="centerY" constant="-210" id="VCX-8X-qUX"/>
                                     <constraint firstItem="Xca-Wc-Tu1" firstAttribute="centerX" secondItem="kS4-P1-AOv" secondAttribute="centerX" id="fVF-4S-GnE"/>
-                                    <constraint firstItem="eRC-fN-d8A" firstAttribute="centerY" secondItem="kS4-P1-AOv" secondAttribute="centerY" id="xyY-4f-0kg"/>
+                                    <constraint firstItem="d4x-Qg-NGn" firstAttribute="centerY" secondItem="kS4-P1-AOv" secondAttribute="centerY" constant="70" id="kkp-M5-w4P"/>
+                                    <constraint firstItem="eRC-fN-d8A" firstAttribute="centerY" secondItem="kS4-P1-AOv" secondAttribute="centerY" constant="-70" id="xyY-4f-0kg"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdA-QI-Lvf">
@@ -732,7 +768,7 @@
                 </tapGestureRecognizer>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OjU-XX-Vyo" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="889" y="570"/>
+            <point key="canvasLocation" x="-7" y="-717"/>
         </scene>
         <!--Creators View Controller-->
         <scene sceneID="Q9p-tQ-Uc5">
@@ -763,7 +799,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZKN-EH-eoZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-882" y="904"/>
+            <point key="canvasLocation" x="889" y="985"/>
+        </scene>
+        <!--Feedback View Controller-->
+        <scene sceneID="3Cx-Xq-R4X">
+            <objects>
+                <viewController storyboardIdentifier="FeedbackPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yEq-22-f2L" customClass="FeedbackViewController" customModule="Interactive_map" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9S4-n9-ExU"/>
+                        <viewControllerLayoutGuide type="bottom" id="cV0-tb-eIu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8jt-Qd-9Og">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLS-z5-5mu">
+                                <rect key="frame" x="132" y="318" width="111" height="30"/>
+                                <state key="normal" title="Send Feedback!"/>
+                                <connections>
+                                    <action selector="goBackToPreviousView:" destination="yEq-22-f2L" eventType="touchUpInside" id="edU-Xn-RLL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QLS-z5-5mu" firstAttribute="centerY" secondItem="8jt-Qd-9Og" secondAttribute="centerY" id="TjV-qb-bGD"/>
+                            <constraint firstItem="QLS-z5-5mu" firstAttribute="centerX" secondItem="8jt-Qd-9Og" secondAttribute="centerX" id="jG9-bL-6Wn"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Caj-dQ-qsK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7" y="985"/>
         </scene>
     </scenes>
     <resources>
@@ -781,6 +848,7 @@
         <image name="reserve-reccenter" width="319" height="79"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="neF-oB-V5I"/>
         <segue reference="r5N-05-Uv8"/>
         <segue reference="Fv6-LB-iXI"/>
         <segue reference="jOc-eU-TuK"/>

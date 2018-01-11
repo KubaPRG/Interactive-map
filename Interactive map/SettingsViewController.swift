@@ -1,5 +1,5 @@
 //
-//  ReportIssueViewController.swift
+//  SettingsViewController.swift
 //  Interactive map
 //
 //  Created by Jakub Kulakowski on 1/11/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReportIssueViewController: UIViewController, UIGestureRecognizerDelegate {
+class SettingsViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var darkBg: UIView!
     @IBOutlet weak var menu: UIView!
@@ -101,7 +101,7 @@ class ReportIssueViewController: UIViewController, UIGestureRecognizerDelegate {
         
         print("The user has signed out.")
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

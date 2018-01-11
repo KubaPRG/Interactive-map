@@ -256,6 +256,7 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
             self.view.layoutIfNeeded()})
     }
     
+    //Sign Out
     @IBAction func didTapSignOut(_ sender: Any) {
         GIDSignIn.sharedInstance().signOut()
         

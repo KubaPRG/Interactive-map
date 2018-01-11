@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         if (configureError != nil) {
             print ("We have an error \(String(describing: configureError))")
         }
+        
         GIDSignIn.sharedInstance().delegate = self
         
         GIDSignIn.sharedInstance().hostedDomain = "lemoyne.edu"

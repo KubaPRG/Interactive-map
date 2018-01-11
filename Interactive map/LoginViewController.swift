@@ -8,6 +8,8 @@
 
 import UIKit
 
+var dismissal: UIViewController?
+
 class LoginViewController: UIViewController, GIDSignInUIDelegate {
 
     @IBOutlet weak var myLabel: UITextView!
@@ -16,6 +18,8 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         super.viewDidLoad()
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signInSilently()
+        
+        dismissal = self
         
         let labelUnderSignIn = NSMutableAttributedString(string:"By tapping Sign In, I agree to Phins' Bikes' Terms of Service, and Privacy Policy.")
         let termsLink = labelUnderSignIn.setAsLink(textToFind: "Terms of Service", linkURL: "http://google.com")

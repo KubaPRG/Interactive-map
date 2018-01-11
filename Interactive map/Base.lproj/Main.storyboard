@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -192,6 +193,18 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xIH-pz-6C2">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOy-dY-o7T">
+                                <rect key="frame" x="10" y="38" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="1cn-lh-y6t"/>
+                                    <constraint firstAttribute="height" constant="40" id="2Rq-Bx-ysJ"/>
+                                </constraints>
+                                <state key="normal" title="Button Menu" image="functions"/>
+                                <connections>
+                                    <action selector="openBg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E2p-Dk-W66"/>
+                                    <action selector="openMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KiT-Pw-rsR"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2P-XU-IBc">
                                 <rect key="frame" x="27" y="1000" width="320" height="78"/>
                                 <constraints>
@@ -294,7 +307,7 @@
                                             <color key="titleColor" red="0.73172837495803833" green="0.68572419881820679" blue="0.13252037763595581" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="MBA-gu-QaZ" kind="presentation" modalTransitionStyle="partialCurl" id="DrR-cH-2LO"/>
+                                            <segue destination="MBA-gu-QaZ" kind="presentation" id="DrR-cH-2LO"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elW-9z-f6m">
@@ -346,20 +359,8 @@
                                     <outletCollection property="gestureRecognizers" destination="czK-MS-ZcW" appends="YES" id="BOF-f9-zx2"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOy-dY-o7T">
-                                <rect key="frame" x="10" y="38" width="50" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="1cn-lh-y6t"/>
-                                    <constraint firstAttribute="height" constant="40" id="2Rq-Bx-ysJ"/>
-                                </constraints>
-                                <state key="normal" title="Button Menu" image="functions"/>
-                                <connections>
-                                    <action selector="openBg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E2p-Dk-W66"/>
-                                    <action selector="openMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KiT-Pw-rsR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OC-Jf-Y59">
-                                <rect key="frame" x="-100" y="43" width="28" height="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OC-Jf-Y59">
+                                <rect key="frame" x="-279" y="43" width="28" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="WKm-FZ-R8B"/>
                                     <constraint firstAttribute="width" constant="28" id="dhA-5j-KXd"/>
@@ -399,7 +400,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7Fx-Jj-VyR" secondAttribute="bottom" constant="20" id="odE-xe-x3J"/>
                             <constraint firstAttribute="trailingMargin" secondItem="s2P-XU-IBc" secondAttribute="trailing" constant="12" id="pee-ik-uHR"/>
                             <constraint firstItem="6J9-Qt-14W" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sFb-lC-8IO"/>
-                            <constraint firstItem="1OC-Jf-Y59" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="tei-rq-awm"/>
+                            <constraint firstItem="1OC-Jf-Y59" firstAttribute="leading" secondItem="Lj3-X2-BBA" secondAttribute="leadingMargin" constant="13" id="tei-rq-awm"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="s2P-XU-IBc" secondAttribute="bottom" constant="20" id="uTz-3V-AaC"/>
                         </constraints>
                     </view>
@@ -449,6 +450,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81c-XU-4ij">
+                                <rect key="frame" x="10" y="38" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Jbt-kT-9fz"/>
+                                    <constraint firstAttribute="width" constant="50" id="mKw-cZ-TRh"/>
+                                </constraints>
+                                <state key="normal" title="Button Menu" image="functions"/>
+                                <connections>
+                                    <action selector="openBg:" destination="cZt-ls-Zek" eventType="touchUpInside" id="pER-05-dZK"/>
+                                    <action selector="openMenu:" destination="cZt-ls-Zek" eventType="touchUpInside" id="eut-9V-jV4"/>
+                                </connections>
+                            </button>
                             <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFa-7D-0Jf">
                                 <rect key="frame" x="1000" y="0.0" width="500" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -511,7 +524,7 @@
                                             <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="MBA-gu-QaZ" kind="presentation" modalTransitionStyle="partialCurl" id="dax-nv-qYI"/>
+                                            <segue destination="MBA-gu-QaZ" kind="presentation" id="dax-nv-qYI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDU-Oi-sro">
@@ -563,20 +576,8 @@
                                     <outletCollection property="gestureRecognizers" destination="ntl-KW-X7o" appends="YES" id="3DQ-Av-9aU"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81c-XU-4ij">
-                                <rect key="frame" x="10" y="38" width="50" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Jbt-kT-9fz"/>
-                                    <constraint firstAttribute="width" constant="50" id="mKw-cZ-TRh"/>
-                                </constraints>
-                                <state key="normal" title="Button Menu" image="functions"/>
-                                <connections>
-                                    <action selector="openBg:" destination="cZt-ls-Zek" eventType="touchUpInside" id="pER-05-dZK"/>
-                                    <action selector="openMenu:" destination="cZt-ls-Zek" eventType="touchUpInside" id="eut-9V-jV4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jW-bD-nSG">
-                                <rect key="frame" x="-100" y="43" width="28" height="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jW-bD-nSG">
+                                <rect key="frame" x="-279" y="43" width="28" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="5m7-nc-YEW"/>
                                     <constraint firstAttribute="width" constant="28" id="eTa-3C-pHL"/>
@@ -593,7 +594,7 @@
                             <constraint firstItem="81c-XU-4ij" firstAttribute="leading" secondItem="thf-ca-L4S" secondAttribute="leading" constant="10" id="GzA-4v-gcO"/>
                             <constraint firstItem="cFa-7D-0Jf" firstAttribute="leading" secondItem="thf-ca-L4S" secondAttribute="leading" constant="1000" id="Nb8-hQ-s2g"/>
                             <constraint firstAttribute="bottom" secondItem="cFa-7D-0Jf" secondAttribute="bottom" id="OKy-Pf-yyV"/>
-                            <constraint firstItem="3jW-bD-nSG" firstAttribute="leading" secondItem="thf-ca-L4S" secondAttribute="leadingMargin" constant="5" id="S4D-7b-ebj"/>
+                            <constraint firstItem="3jW-bD-nSG" firstAttribute="leading" secondItem="V8x-4p-iFT" secondAttribute="leadingMargin" constant="13" id="S4D-7b-ebj"/>
                             <constraint firstAttribute="bottom" secondItem="V8x-4p-iFT" secondAttribute="bottom" id="Xch-hl-qpf"/>
                             <constraint firstItem="81c-XU-4ij" firstAttribute="top" secondItem="xci-ql-nyA" secondAttribute="bottom" constant="18" id="baW-Hg-bHQ"/>
                             <constraint firstItem="V8x-4p-iFT" firstAttribute="leading" secondItem="thf-ca-L4S" secondAttribute="leading" constant="-300" id="q66-gI-B3K"/>
@@ -641,6 +642,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdA-QI-Lvf">
+                                <rect key="frame" x="10" y="38" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="O7d-DI-cgM"/>
+                                    <constraint firstAttribute="width" constant="50" id="hgy-Zf-IwH"/>
+                                </constraints>
+                                <state key="normal" title="Button Menu" image="functions"/>
+                                <connections>
+                                    <action selector="openBg:" destination="CUv-f1-9P7" eventType="touchUpInside" id="KJH-nH-Uwh"/>
+                                    <action selector="openMenu:" destination="CUv-f1-9P7" eventType="touchUpInside" id="v5R-E3-baO"/>
+                                </connections>
+                            </button>
                             <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I6f-rw-x92">
                                 <rect key="frame" x="1000" y="0.0" width="500" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -703,7 +716,7 @@
                                             <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="MBA-gu-QaZ" kind="presentation" modalTransitionStyle="partialCurl" id="r5N-05-Uv8"/>
+                                            <segue destination="MBA-gu-QaZ" kind="presentation" id="r5N-05-Uv8"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0P-9c-tsx">
@@ -755,20 +768,8 @@
                                     <outletCollection property="gestureRecognizers" destination="JKG-4A-JzB" appends="YES" id="RvE-tT-llt"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdA-QI-Lvf">
-                                <rect key="frame" x="10" y="38" width="50" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="O7d-DI-cgM"/>
-                                    <constraint firstAttribute="width" constant="50" id="hgy-Zf-IwH"/>
-                                </constraints>
-                                <state key="normal" title="Button Menu" image="functions"/>
-                                <connections>
-                                    <action selector="openBg:" destination="CUv-f1-9P7" eventType="touchUpInside" id="KJH-nH-Uwh"/>
-                                    <action selector="openMenu:" destination="CUv-f1-9P7" eventType="touchUpInside" id="v5R-E3-baO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jD-fN-N9d">
-                                <rect key="frame" x="-100" y="43" width="28" height="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jD-fN-N9d">
+                                <rect key="frame" x="-279" y="43" width="28" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="28" id="xAA-VQ-LVz"/>
                                     <constraint firstAttribute="height" constant="28" id="zuY-LK-xTc"/>
@@ -782,7 +783,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="kS4-P1-AOv" secondAttribute="bottom" id="46w-WT-e8e"/>
-                            <constraint firstItem="3jD-fN-N9d" firstAttribute="leading" secondItem="xGs-IE-jeF" secondAttribute="leadingMargin" constant="5" id="afX-WT-GHD"/>
+                            <constraint firstItem="3jD-fN-N9d" firstAttribute="leading" secondItem="kS4-P1-AOv" secondAttribute="leadingMargin" constant="13" id="afX-WT-GHD"/>
                             <constraint firstItem="3jD-fN-N9d" firstAttribute="top" secondItem="Njm-w8-f40" secondAttribute="bottom" constant="23" id="fo8-Z8-wVE"/>
                             <constraint firstItem="kS4-P1-AOv" firstAttribute="leading" secondItem="xGs-IE-jeF" secondAttribute="leading" constant="-300" id="jlw-Pb-XKr"/>
                             <constraint firstItem="kS4-P1-AOv" firstAttribute="top" secondItem="xGs-IE-jeF" secondAttribute="top" id="lgX-XF-6Q3"/>
@@ -899,12 +900,12 @@
         <image name="reserve-reccenter" width="319" height="79"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nRp-dZ-XuO"/>
+        <segue reference="neF-oB-V5I"/>
         <segue reference="dax-nv-qYI"/>
         <segue reference="ul7-Se-MvY"/>
-        <segue reference="BdG-6s-wFZ"/>
-        <segue reference="AEU-2o-KKl"/>
-        <segue reference="Ttf-TW-pwE"/>
-        <segue reference="r0y-R2-VSX"/>
+        <segue reference="jOc-eU-TuK"/>
+        <segue reference="dlm-G7-kth"/>
+        <segue reference="TgV-1z-ImP"/>
+        <segue reference="lav-0R-bXB"/>
     </inferredMetricsTieBreakers>
 </document>

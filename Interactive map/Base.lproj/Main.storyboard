@@ -97,6 +97,9 @@
                                     <constraint firstAttribute="height" constant="110" id="gEd-Lp-g1o"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="LMCSeal"/>
+                                <connections>
+                                    <action selector="didTapLMC:" destination="idn-oF-6Ca" eventType="touchUpInside" id="4Q8-Yy-eiE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aF-qo-DrT">
                                 <rect key="frame" x="212" y="303" width="110" height="110"/>
@@ -105,6 +108,9 @@
                                     <constraint firstAttribute="width" constant="110" id="jYG-KE-bPX"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="LMZSeal"/>
+                                <connections>
+                                    <action selector="didTapLMZ:" destination="idn-oF-6Ca" eventType="touchUpInside" id="czi-DR-wkV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYB-xb-6n9">
                                 <rect key="frame" x="52" y="303" width="110" height="110"/>

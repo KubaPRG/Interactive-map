@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 var dismissal: UIViewController?
 
@@ -35,11 +36,21 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         
     }
     
-    @IBAction func didTapSGA(_ sender: Any) {
-        if let url = URL(string:"https://www.lemoyne.edu/Student-Life/Getting-Involved/Student-Government"){
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        }
+    @IBAction func didTapLMC(_ sender: Any) {
+        let svc = SFSafariViewController(url: URL(string:"https://www.lemoyne.edu")!)
+        self.present(svc, animated: true, completion: nil)
     }
+    
+    @IBAction func didTapSGA(_ sender: Any) {
+            let svc = SFSafariViewController(url: URL(string:"https://www.lemoyne.edu/Student-Life/Getting-Involved/Student-Government")!)
+            self.present(svc, animated: true, completion: nil)
+    }
+    
+    @IBAction func didTapLMZ(_ sender: Any) {
+        let svc = SFSafariViewController(url: URL(string:"http://www.themakerinstitute.org")!)
+        self.present(svc, animated: true, completion: nil)
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

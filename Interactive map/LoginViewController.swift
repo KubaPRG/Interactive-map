@@ -35,6 +35,12 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         
     }
     
+    @IBAction func didTapSGA(_ sender: Any) {
+        if let url = URL(string:"https://www.lemoyne.edu/Student-Life/Getting-Involved/Student-Government"){
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

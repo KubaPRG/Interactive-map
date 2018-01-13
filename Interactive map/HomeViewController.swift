@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  Interactive map
 //
 //  Created by Jakub Kulakowski on 12/7/17.
@@ -9,6 +9,8 @@
 import UIKit
 import MapKit
 import CoreLocation
+
+var myLocation = CLLocationCoordinate2DMake(43.0487734, -76.0875042)
 
 class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIGestureRecognizerDelegate {
     class CustomPointAnnotation: MKPointAnnotation {
@@ -61,7 +63,6 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         }
         
         let mySpan:MKCoordinateSpan = MKCoordinateSpanMake(0.005, 0.005)
-        var myLocation = CLLocationCoordinate2DMake(43.0487734, -76.0875042)
         let myActualLocation = self.locationManager.location?.coordinate
         if myActualLocation != nil {
             myLocation = myActualLocation!
@@ -189,7 +190,13 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
             buttonReserveDablon.isHidden = true
             buttonReserveRecCenter.isHidden = true
         }
-
+    
+    // Button showing My Location
+    @IBAction func didTapMyLocationButton(_ sender: Any) {
+        let myLocationSpan = MKCoordinateSpanMake(0.005, 0.005)
+        let myLocationRegion = MKCoordinateRegion(center: (self.locationManager.location?.coordinate)!, span: myLocationSpan)
+        self.map.setRegion(myLocationRegion, animated: true)
+    }
     
     // SLIDE-IN MENU
     

@@ -63,11 +63,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 
                 let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
                 if launchedBefore  {
-                    self.showHomePage()
                     dismissal?.dismiss(animated: true, completion: nil)
                     print("This is not first launch.")
                 } else {
-                    self.showHomePage()
+                    self.setHomePage()
                     let sb = UIStoryboard(name: "Main", bundle: nil)
                     let tvc = sb.instantiateViewController(withIdentifier: "TutorialPage")
                     self.window?.rootViewController?.present(tvc, animated: true, completion: nil)
@@ -81,7 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         }
     }
  
-    func showHomePage(){
+    func setHomePage(){
         let sb = UIStoryboard(name: "Main", bundle: nil)
         window!.rootViewController = sb.instantiateViewController(withIdentifier: "HomePage")
     }

@@ -67,7 +67,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                     dismissal?.dismiss(animated: true, completion: nil)
                     print("This is not first launch.")
                 } else {
-                    self.showTutorialPage()
+                    self.showHomePage()
+                    let sb = UIStoryboard(name: "Main", bundle: nil)
+                    let tvc = sb.instantiateViewController(withIdentifier: "TutorialPage")
+                    self.window?.rootViewController?.present(tvc, animated: true, completion: nil)
                     dismissal?.dismiss(animated: true, completion: nil)
                     UserDefaults.standard.set(true, forKey: "launchedBefore")
                     UserDefaults.standard.synchronize()
@@ -77,12 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             
         }
     }
-    
-    func showTutorialPage(){
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        window!.rootViewController = sb.instantiateViewController(withIdentifier: "TutorialPage")
-    }
-    
+ 
     func showHomePage(){
         let sb = UIStoryboard(name: "Main", bundle: nil)
         window!.rootViewController = sb.instantiateViewController(withIdentifier: "HomePage")

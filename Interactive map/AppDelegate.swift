@@ -63,6 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 
                 let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
                 if launchedBefore  {
+                    self.setHomePage()
                     dismissal?.dismiss(animated: true, completion: nil)
                     print("This is not first launch.")
                 } else {

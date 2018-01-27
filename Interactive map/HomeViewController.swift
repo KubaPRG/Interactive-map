@@ -193,6 +193,14 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     
     // Button showing My Location
     @IBAction func didTapMyLocationButton(_ sender: Any) {
+        if self.locationManager.location?.coordinate != nil {
+           centerMyLocation()
+        } else {
+            print("No location detected")
+        }
+    }
+    
+    func centerMyLocation () {
         let myLocationSpan = MKCoordinateSpanMake(0.005, 0.005)
         let myLocationRegion = MKCoordinateRegion(center: (self.locationManager.location?.coordinate)!, span: myLocationSpan)
         self.map.setRegion(myLocationRegion, animated: true)

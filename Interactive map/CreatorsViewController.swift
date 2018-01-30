@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class CreatorsViewController: UIViewController {
     
@@ -18,8 +19,16 @@ class CreatorsViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func didTapSGA(_ sender: Any) {
+        let svc = SFSafariViewController(url: URL(string:"https://www.lemoyne.edu/Student-Life/Getting-Involved/Student-Government")!)
+        self.present(svc, animated: true, completion: nil)
+    }
     
-
+    @IBAction func didTapLMZ(_ sender: Any) {
+        let svc = SFSafariViewController(url: URL(string:"http://www.themakerinstitute.org")!)
+        self.present(svc, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

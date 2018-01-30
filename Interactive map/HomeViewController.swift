@@ -20,6 +20,12 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var darkBg: UIView!
     @IBOutlet weak var menu: UIView!
+    @IBOutlet weak var blockedView: UIView!
+    
+    
+    @IBOutlet weak var blockedViewTopConst: NSLayoutConstraint!
+    @IBOutlet weak var blockedViewBottomConst: NSLayoutConstraint!
+    
     
     @IBOutlet weak var menuLeadingConst: NSLayoutConstraint!
     @IBOutlet weak var darkBgConst: NSLayoutConstraint!
@@ -53,7 +59,6 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
         
         if CLLocationManager.locationServicesEnabled() {
@@ -204,6 +209,31 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         let myLocationSpan = MKCoordinateSpanMake(0.005, 0.005)
         let myLocationRegion = MKCoordinateRegion(center: (self.locationManager.location?.coordinate)!, span: myLocationSpan)
         self.map.setRegion(myLocationRegion, animated: true)
+    }
+    
+    @IBAction func settingsButton(_ sender: Any) {
+            let url = URL(string: UIApplicationOpenSettingsURLString)!
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+    
+    func locationManager(_ manager: CLLocationManager,
+                         didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .restricted, .denied:
+            blockedViewTopConst.constant = 0
+            blockedViewBottomConst.constant = 0
+            break
+            
+        case .notDetermined:
+            blockedViewTopConst.constant = 0
+            blockedViewBottomConst.constant = 0
+            break
+            
+        case .authorizedWhenInUse, .authorizedAlways:
+            blockedViewTopConst.constant = -1000
+            blockedViewBottomConst.constant = 1000
+            break
+        }
     }
     
     // SLIDE-IN MENU

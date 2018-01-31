@@ -32,6 +32,13 @@ class SettingsViewController: UIViewController, UIGestureRecognizerDelegate {
         buttonExitMenu.isHidden = true
     }
     
+    // Open In-App Settings
+    @IBAction func didTapAppSettings(_ sender: Any) {
+        UIApplication.shared.open(URL(string:UIApplicationOpenSettingsURLString)!)
+    }
+    
+    
+    
     // SLIDE-IN MENU
     
     // Opens Background when button pressed

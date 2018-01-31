@@ -258,18 +258,42 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hil-AE-V94">
                                 <rect key="frame" x="0.0" y="-1000" width="375" height="667"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDR-q5-Exn">
-                                        <rect key="frame" x="159" y="318" width="57" height="30"/>
-                                        <state key="normal" title="Settings"/>
-                                        <connections>
-                                            <action selector="settingsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dkz-DD-6Jn"/>
-                                        </connections>
-                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Syracuse" translatesAutoresizingMaskIntoConstraints="NO" id="pap-7L-cD3">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                    <visualEffectView opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SUI-qO-ne6">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="VvD-kp-3D1">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <blurEffect style="light"/>
+                                    </visualEffectView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyS-fw-CNe">
+                                        <rect key="frame" x="67" y="251" width="240" height="165"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="BrC-J4-zQl"/>
+                                            <constraint firstAttribute="height" constant="165" id="cNo-aV-PiE"/>
+                                        </constraints>
+                                        <string key="text">Please go to the app's settings and enable your location in order to be able to continue using the app.
+
+Thank you!</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="ZDR-q5-Exn" firstAttribute="centerX" secondItem="Hil-AE-V94" secondAttribute="centerX" id="ByV-b4-Zv5"/>
-                                    <constraint firstItem="ZDR-q5-Exn" firstAttribute="centerY" secondItem="Hil-AE-V94" secondAttribute="centerY" id="wdi-Zd-4Wf"/>
+                                    <constraint firstAttribute="bottom" secondItem="SUI-qO-ne6" secondAttribute="bottom" id="3cI-k4-uj6"/>
+                                    <constraint firstAttribute="trailing" secondItem="pap-7L-cD3" secondAttribute="trailing" id="9qM-ZR-vcl"/>
+                                    <constraint firstItem="GyS-fw-CNe" firstAttribute="centerX" secondItem="Hil-AE-V94" secondAttribute="centerX" id="E2v-y1-PS2"/>
+                                    <constraint firstItem="pap-7L-cD3" firstAttribute="top" secondItem="Hil-AE-V94" secondAttribute="top" id="LGA-gB-tSq"/>
+                                    <constraint firstItem="SUI-qO-ne6" firstAttribute="top" secondItem="Hil-AE-V94" secondAttribute="top" id="Rgu-c0-45L"/>
+                                    <constraint firstItem="SUI-qO-ne6" firstAttribute="leading" secondItem="Hil-AE-V94" secondAttribute="leading" id="Rs0-w6-Al9"/>
+                                    <constraint firstAttribute="bottom" secondItem="pap-7L-cD3" secondAttribute="bottom" id="X5w-uw-odo"/>
+                                    <constraint firstItem="pap-7L-cD3" firstAttribute="leading" secondItem="Hil-AE-V94" secondAttribute="leading" id="ZTZ-Vr-hK3"/>
+                                    <constraint firstItem="GyS-fw-CNe" firstAttribute="centerY" secondItem="Hil-AE-V94" secondAttribute="centerY" id="aX3-0m-x87"/>
+                                    <constraint firstAttribute="trailing" secondItem="SUI-qO-ne6" secondAttribute="trailing" id="iOh-kZ-pW7"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOy-dY-o7T">
@@ -754,7 +778,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bike Theft Detection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOg-QV-wpM">
-                                <rect key="frame" x="92" y="323" width="167.5" height="21"/>
+                                <rect key="frame" x="94" y="323" width="167.5" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -806,8 +830,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOD-qN-5Cy">
-                                <rect key="frame" x="128.5" y="436.5" width="96" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOD-qN-5Cy">
+                                <rect key="frame" x="124" y="436.5" width="105" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -986,7 +1010,7 @@
                             <constraint firstAttribute="bottomMargin" secondItem="0EE-z3-K8d" secondAttribute="bottom" constant="25" id="aSY-GT-7lp"/>
                             <constraint firstItem="AzV-cY-241" firstAttribute="centerX" secondItem="xGs-IE-jeF" secondAttribute="centerX" constant="-10" id="aTU-hJ-gRd"/>
                             <constraint firstItem="3jD-fN-N9d" firstAttribute="leading" secondItem="kS4-P1-AOv" secondAttribute="leadingMargin" constant="13" id="afX-WT-GHD"/>
-                            <constraint firstItem="kOg-QV-wpM" firstAttribute="centerX" secondItem="xGs-IE-jeF" secondAttribute="centerX" constant="-12" id="agZ-Uq-C66"/>
+                            <constraint firstItem="kOg-QV-wpM" firstAttribute="centerX" secondItem="xGs-IE-jeF" secondAttribute="centerX" constant="-10" id="agZ-Uq-C66"/>
                             <constraint firstAttribute="bottom" secondItem="QVy-su-wrm" secondAttribute="bottom" id="f8E-fB-vWD"/>
                             <constraint firstItem="rzh-nz-NfX" firstAttribute="centerX" secondItem="xGs-IE-jeF" secondAttribute="centerX" id="fL7-Zd-0YN"/>
                             <constraint firstItem="3jD-fN-N9d" firstAttribute="top" secondItem="Njm-w8-f40" secondAttribute="bottom" constant="23" id="fo8-Z8-wVE"/>
@@ -1225,6 +1249,7 @@ Maker Zone position: Vice President</string>
         <image name="SGASeal" width="400" height="400"/>
         <image name="ScienceAdd" width="679" height="685"/>
         <image name="SetButton" width="147" height="72"/>
+        <image name="Syracuse" width="421" height="670"/>
         <image name="X" width="600" height="600"/>
         <image name="events" width="1920" height="1796"/>
         <image name="functions" width="768" height="768"/>

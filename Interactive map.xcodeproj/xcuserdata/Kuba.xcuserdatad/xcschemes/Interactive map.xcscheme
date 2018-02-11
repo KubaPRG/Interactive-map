@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8C9D3E781FD9A14700821BEB"
-               BuildableName = "Interactive map.app"
+               BuildableName = "Bike Sharing.app"
                BlueprintName = "Interactive map"
                ReferencedContainer = "container:Interactive map.xcodeproj">
             </BuildableReference>
@@ -54,7 +54,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8C9D3E781FD9A14700821BEB"
-            BuildableName = "Interactive map.app"
+            BuildableName = "Bike Sharing.app"
             BlueprintName = "Interactive map"
             ReferencedContainer = "container:Interactive map.xcodeproj">
          </BuildableReference>
@@ -78,7 +78,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8C9D3E781FD9A14700821BEB"
-            BuildableName = "Interactive map.app"
+            BuildableName = "Bike Sharing.app"
             BlueprintName = "Interactive map"
             ReferencedContainer = "container:Interactive map.xcodeproj">
          </BuildableReference>
@@ -97,7 +97,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8C9D3E781FD9A14700821BEB"
-            BuildableName = "Interactive map.app"
+            BuildableName = "Bike Sharing.app"
             BlueprintName = "Interactive map"
             ReferencedContainer = "container:Interactive map.xcodeproj">
          </BuildableReference>

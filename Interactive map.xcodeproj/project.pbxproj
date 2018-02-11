@@ -63,7 +63,7 @@
 		8C94CFC72006FE3F00C3F45F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8C94CFCB2007046D00C3F45F /* CreatorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorsViewController.swift; sourceTree = "<group>"; };
 		8C94CFCD20070FFF00C3F45F /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
-		8C9D3E791FD9A14700821BEB /* Interactive map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Interactive map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C9D3E791FD9A14700821BEB /* Bike Sharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bike Sharing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9D3E7C1FD9A14700821BEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C9D3E7E1FD9A14700821BEB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8C9D3E811FD9A14800821BEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 		8C9D3E7A1FD9A14700821BEB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8C9D3E791FD9A14700821BEB /* Interactive map.app */,
+				8C9D3E791FD9A14700821BEB /* Bike Sharing.app */,
 				8C9D3E8D1FD9A14800821BEB /* Interactive mapTests.xctest */,
 				8C9D3E981FD9A14800821BEB /* Interactive mapUITests.xctest */,
 			);
@@ -219,7 +219,7 @@
 			);
 			name = "Interactive map";
 			productName = "Interactive map";
-			productReference = 8C9D3E791FD9A14700821BEB /* Interactive map.app */;
+			productReference = 8C9D3E791FD9A14700821BEB /* Bike Sharing.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8C9D3E8C1FD9A14800821BEB /* Interactive mapTests */ = {
@@ -683,7 +683,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "JK.Interactive-map";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Bike Sharing";
 				SWIFT_OBJC_BRIDGING_HEADER = "Interactive map/Interactive map-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -702,7 +702,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "JK.Interactive-map";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Bike Sharing";
 				SWIFT_OBJC_BRIDGING_HEADER = "Interactive map/Interactive map-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

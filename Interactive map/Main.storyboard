@@ -33,8 +33,17 @@
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="By tapping Sign In, I agree to Phins' Bikes' Terms of Service, and Privacy Policy." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CiC-gD-wHb">
-                                <rect key="frame" x="67.666666666666686" y="698.66666666666663" width="240" height="40"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRZ-NF-iT5" customClass="GIDSignInButton">
+                                <rect key="frame" x="67.666666666666686" y="653" width="240" height="35"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="NzN-Fe-J5U"/>
+                                    <constraint firstAttribute="width" constant="240" id="v3Z-Jf-ljw"/>
+                                </constraints>
+                            </view>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="By tapping Sign In, I agree to Phins' Bikes' Terms of Service, and Privacy Policy." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CiC-gD-wHb">
+                                <rect key="frame" x="67.666666666666686" y="700" width="240" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="NZN-Pg-qxE"/>
                                     <constraint firstAttribute="width" constant="240" id="c8v-lP-Flw"/>
@@ -58,7 +67,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="Free of charge!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2Y-uZ-2hl">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Free of charge!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2Y-uZ-2hl">
                                 <rect key="frame" x="67.666666666666686" y="590" width="240" height="58"/>
                                 <color key="tintColor" red="0.73172837495803833" green="0.68572419881820679" blue="0.13252037763595581" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -119,20 +128,23 @@
                         <constraints>
                             <constraint firstItem="prf-4Q-qG0" firstAttribute="top" secondItem="WwP-ot-S6u" secondAttribute="bottom" constant="5" id="0or-Ec-H8H"/>
                             <constraint firstItem="6aF-qo-DrT" firstAttribute="centerY" secondItem="zIN-Qs-NXl" secondAttribute="centerY" constant="25" id="48a-Y2-hHI"/>
-                            <constraint firstItem="CiC-gD-wHb" firstAttribute="top" secondItem="i2Y-uZ-2hl" secondAttribute="bottom" constant="50" id="Ad8-gM-pNq"/>
                             <constraint firstAttribute="trailing" secondItem="G6J-bc-JTD" secondAttribute="trailing" id="Api-Rb-WIC"/>
+                            <constraint firstItem="AiD-9k-iQ4" firstAttribute="top" secondItem="ZRZ-NF-iT5" secondAttribute="bottom" constant="90" id="Cbh-dp-nbL"/>
                             <constraint firstItem="nyt-sC-23r" firstAttribute="centerX" secondItem="zIN-Qs-NXl" secondAttribute="centerX" id="D25-jh-Bmm"/>
                             <constraint firstItem="G6J-bc-JTD" firstAttribute="leading" secondItem="zIN-Qs-NXl" secondAttribute="leading" id="GnT-El-yWI"/>
                             <constraint firstItem="i2Y-uZ-2hl" firstAttribute="centerX" secondItem="zIN-Qs-NXl" secondAttribute="centerX" id="MSR-x5-x3m"/>
                             <constraint firstItem="6aF-qo-DrT" firstAttribute="top" secondItem="nyt-sC-23r" secondAttribute="bottom" constant="10" id="NIl-f0-hGx"/>
                             <constraint firstItem="aYB-xb-6n9" firstAttribute="centerX" secondItem="zIN-Qs-NXl" secondAttribute="centerX" constant="-80" id="bz3-AU-iRq"/>
+                            <constraint firstItem="CiC-gD-wHb" firstAttribute="top" secondItem="ZRZ-NF-iT5" secondAttribute="bottom" constant="12" id="dSq-ih-TrV"/>
                             <constraint firstItem="prf-4Q-qG0" firstAttribute="centerX" secondItem="zIN-Qs-NXl" secondAttribute="centerX" id="gQC-d3-HLl"/>
+                            <constraint firstItem="ZRZ-NF-iT5" firstAttribute="top" secondItem="i2Y-uZ-2hl" secondAttribute="bottom" constant="5" id="hE5-Ma-mfa"/>
                             <constraint firstAttribute="bottom" secondItem="G6J-bc-JTD" secondAttribute="bottom" id="hT0-sm-cWA"/>
                             <constraint firstItem="aYB-xb-6n9" firstAttribute="centerY" secondItem="zIN-Qs-NXl" secondAttribute="centerY" constant="25" id="i9y-PI-A3Z"/>
                             <constraint firstItem="XXy-tK-HjP" firstAttribute="centerX" secondItem="zIN-Qs-NXl" secondAttribute="centerX" id="jE4-Tw-6yF"/>
                             <constraint firstItem="6aF-qo-DrT" firstAttribute="centerX" secondItem="zIN-Qs-NXl" secondAttribute="centerX" constant="80" id="kcQ-ro-q2a"/>
                             <constraint firstItem="XXy-tK-HjP" firstAttribute="centerY" secondItem="zIN-Qs-NXl" secondAttribute="centerY" constant="24" id="m3N-LI-qHn"/>
                             <constraint firstItem="CiC-gD-wHb" firstAttribute="centerX" secondItem="zIN-Qs-NXl" secondAttribute="centerX" id="m7i-Zu-MJS"/>
+                            <constraint firstItem="ZRZ-NF-iT5" firstAttribute="centerX" secondItem="zIN-Qs-NXl" secondAttribute="centerX" id="r2f-6A-j0e"/>
                             <constraint firstItem="WwP-ot-S6u" firstAttribute="top" secondItem="HAr-Xd-F64" secondAttribute="bottom" constant="20" id="tn2-S1-owv"/>
                             <constraint firstItem="WwP-ot-S6u" firstAttribute="centerX" secondItem="zIN-Qs-NXl" secondAttribute="centerX" id="xz3-MI-dG9"/>
                             <constraint firstItem="G6J-bc-JTD" firstAttribute="top" secondItem="zIN-Qs-NXl" secondAttribute="top" id="yy8-nZ-29O"/>
@@ -144,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2B-qa-s5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-882.39999999999998" y="118.22660098522168"/>
+            <point key="canvasLocation" x="-882.39999999999998" y="118.29085457271366"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="y7v-Da-YvV">
@@ -1315,12 +1327,12 @@ Maker Zone position: Vice President</string>
         <image name="trees" width="2272" height="1704"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Mhr-6b-Rza"/>
-        <segue reference="DrR-cH-2LO"/>
-        <segue reference="Fv6-LB-iXI"/>
+        <segue reference="nRp-dZ-XuO"/>
+        <segue reference="dax-nv-qYI"/>
+        <segue reference="ul7-Se-MvY"/>
         <segue reference="BdG-6s-wFZ"/>
         <segue reference="AEU-2o-KKl"/>
-        <segue reference="knH-aq-oau"/>
-        <segue reference="Vda-HA-Zq6"/>
+        <segue reference="Ttf-TW-pwE"/>
+        <segue reference="r0y-R2-VSX"/>
     </inferredMetricsTieBreakers>
 </document>

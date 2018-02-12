@@ -41,7 +41,6 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     @IBOutlet weak var buttonMenu: UIButton!
     @IBOutlet weak var buttonExitMenu: UIButton!
     
-    var bullshit = CustomPointAnnotation()
     var grewenHall = CustomPointAnnotation()
     var harrisonHall = CustomPointAnnotation()
     var mitchellHall = CustomPointAnnotation()

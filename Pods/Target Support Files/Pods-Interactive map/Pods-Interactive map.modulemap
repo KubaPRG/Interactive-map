@@ -1,0 +1,6 @@
+framework module Pods_Interactive_map {
+  umbrella header "Pods-Interactive map-umbrella.h"
+
+  export *
+  module * { export * }
+}

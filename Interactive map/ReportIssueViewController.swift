@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ReportIssueViewController: UIViewController, UIGestureRecognizerDelegate {
+class ReportIssueViewController: UIViewController, UIGestureRecognizerDelegate, UITextViewDelegate, UITextFieldDelegate {
+    
+    @IBOutlet weak var issueDescription: UITextView!
     
     @IBOutlet weak var darkBg: UIView!
     @IBOutlet weak var menu: UIView!
@@ -23,6 +25,8 @@ class ReportIssueViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        issueDescription.delegate = self
         
         menu.layer.shadowOpacity = 1
         menu.layer.shadowRadius = 8
@@ -101,6 +105,15 @@ class ReportIssueViewController: UIViewController, UIGestureRecognizerDelegate {
             buttonExitMenu.isHidden = true
         }
         menuShowing = !menuShowing
+    }
+    
+    //Dismisses keyboard after Return Key is pressed
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
     }
     
     //Sign Out

@@ -270,7 +270,7 @@
                                         <blurEffect style="light"/>
                                     </visualEffectView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyS-fw-CNe">
-                                        <rect key="frame" x="67.333333333333314" y="323.33333333333337" width="240" height="165"/>
+                                        <rect key="frame" x="67.666666666666686" y="323.33333333333337" width="240" height="165"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="BrC-J4-zQl"/>
                                             <constraint firstAttribute="height" constant="165" id="cNo-aV-PiE"/>
@@ -526,11 +526,11 @@ Thank you!</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFO-r4-LY7">
-                                <rect key="frame" x="163" y="570" width="49" height="30"/>
+                                <rect key="frame" x="163" y="678" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="In case of a stolen bike or bike lock call Campus Security at 315-445-4444" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiQ-bC-xBS">
-                                <rect key="frame" x="37.666666666666657" y="698" width="300" height="50"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="In case of a stolen bike or bike lock call Campus Security at 315-445-4444" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiQ-bC-xBS">
+                                <rect key="frame" x="37.666666666666657" y="713" width="300" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7xY-6i-mUq"/>
                                     <constraint firstAttribute="width" constant="300" id="Z2m-iE-OkG"/>
@@ -538,25 +538,21 @@ Thank you!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYf-Jc-R45">
-                                <rect key="frame" x="37.666666666666657" y="115" width="300" height="105"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYf-Jc-R45">
+                                <rect key="frame" x="46" y="115" width="283" height="105"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="6tg-Wt-W92"/>
+                                    <constraint firstAttribute="width" constant="283" id="6tg-Wt-W92"/>
                                     <constraint firstAttribute="height" constant="105" id="WlD-uV-9kn"/>
                                 </constraints>
                                 <string key="text">In the textfield below, please describe in detail any technical issues including unfunctional lock, flat tire, missing bike seat, damaged bike, damaged bike station, app-related problems, etc.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fM7-6N-cTv">
-                                <rect key="frame" x="37.666666666666657" y="235" width="300" height="300"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fM7-6N-cTv">
+                                <rect key="frame" x="36" y="235" width="303" height="433"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="1dl-sg-ygZ"/>
-                                    <constraint firstAttribute="width" constant="300" id="6Ed-Mn-GW6"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report Issue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WS-lI-EJQ">
                                 <rect key="frame" x="99.666666666666686" y="64" width="176" height="36"/>
@@ -706,7 +702,6 @@ Thank you!</string>
                         <constraints>
                             <constraint firstItem="fM7-6N-cTv" firstAttribute="centerX" secondItem="thf-ca-L4S" secondAttribute="centerX" id="CAf-v8-edT"/>
                             <constraint firstItem="V8x-4p-iFT" firstAttribute="top" secondItem="thf-ca-L4S" secondAttribute="top" id="Cko-Jl-L7p"/>
-                            <constraint firstItem="cFO-r4-LY7" firstAttribute="top" secondItem="fM7-6N-cTv" secondAttribute="bottom" constant="35" id="DoV-tb-c9y"/>
                             <constraint firstAttribute="trailing" secondItem="rxd-a0-9jE" secondAttribute="trailing" id="F2m-ei-Ku5"/>
                             <constraint firstItem="81c-XU-4ij" firstAttribute="leading" secondItem="thf-ca-L4S" secondAttribute="leading" constant="10" id="GzA-4v-gcO"/>
                             <constraint firstItem="2WS-lI-EJQ" firstAttribute="top" secondItem="thf-ca-L4S" secondAttribute="topMargin" constant="20" id="IFe-9K-Ohj"/>
@@ -720,14 +715,18 @@ Thank you!</string>
                             <constraint firstAttribute="bottom" secondItem="V8x-4p-iFT" secondAttribute="bottom" id="Xch-hl-qpf"/>
                             <constraint firstItem="ZiQ-bC-xBS" firstAttribute="centerX" secondItem="thf-ca-L4S" secondAttribute="centerX" id="YBk-XM-HbG"/>
                             <constraint firstItem="81c-XU-4ij" firstAttribute="top" secondItem="xci-ql-nyA" secondAttribute="bottom" constant="18" id="baW-Hg-bHQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fM7-6N-cTv" secondAttribute="trailing" constant="20" id="fw7-j5-3ar"/>
                             <constraint firstItem="cFO-r4-LY7" firstAttribute="centerX" secondItem="thf-ca-L4S" secondAttribute="centerX" id="lgd-a2-maN"/>
                             <constraint firstAttribute="bottom" secondItem="rxd-a0-9jE" secondAttribute="bottom" id="ofl-RF-QoS"/>
                             <constraint firstItem="V8x-4p-iFT" firstAttribute="leading" secondItem="thf-ca-L4S" secondAttribute="leading" constant="-300" id="q66-gI-B3K"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="fM7-6N-cTv" secondAttribute="bottom" constant="110" id="qxI-lG-SbA"/>
                             <constraint firstItem="rxd-a0-9jE" firstAttribute="top" secondItem="thf-ca-L4S" secondAttribute="top" id="rSQ-N6-3XO"/>
                             <constraint firstItem="3jW-bD-nSG" firstAttribute="top" secondItem="xci-ql-nyA" secondAttribute="bottom" constant="23" id="sXj-o3-OKL"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="ZiQ-bC-xBS" secondAttribute="bottom" constant="30" id="siN-ci-s0G"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ZiQ-bC-xBS" secondAttribute="bottom" constant="15" id="siN-ci-s0G"/>
                             <constraint firstItem="cFa-7D-0Jf" firstAttribute="top" secondItem="thf-ca-L4S" secondAttribute="top" id="w0q-re-Fne"/>
                             <constraint firstItem="fM7-6N-cTv" firstAttribute="top" secondItem="nYf-Jc-R45" secondAttribute="bottom" constant="15" id="wtb-OH-j34"/>
+                            <constraint firstItem="fM7-6N-cTv" firstAttribute="leading" secondItem="thf-ca-L4S" secondAttribute="leadingMargin" constant="20" id="xhU-gu-YKf"/>
+                            <constraint firstItem="ZiQ-bC-xBS" firstAttribute="top" secondItem="cFO-r4-LY7" secondAttribute="bottom" constant="5" id="yE0-Ia-so8"/>
                         </constraints>
                     </view>
                     <connections>
@@ -735,6 +734,7 @@ Thank you!</string>
                         <outlet property="buttonMenu" destination="81c-XU-4ij" id="GAO-0U-xJq"/>
                         <outlet property="darkBg" destination="cFa-7D-0Jf" id="6im-3R-SuG"/>
                         <outlet property="darkBgConst" destination="Nb8-hQ-s2g" id="ddH-li-7ge"/>
+                        <outlet property="issueDescription" destination="fM7-6N-cTv" id="QV1-rJ-0U8"/>
                         <outlet property="menu" destination="V8x-4p-iFT" id="b9F-ga-5qI"/>
                         <outlet property="menuLeadingConst" destination="q66-gI-B3K" id="SBo-Ke-2cB"/>
                     </connections>
@@ -756,7 +756,7 @@ Thank you!</string>
                 </swipeGestureRecognizer>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Peo-ST-Vo7" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888.79999999999995" y="117.39130434782609"/>
+            <point key="canvasLocation" x="887.20000000000005" y="116.00985221674877"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="1lY-6H-crk">
@@ -840,7 +840,7 @@ Thank you!</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bike Theft Detection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOg-QV-wpM">
-                                <rect key="frame" x="94.000000000000014" y="395.66666666666669" width="167.33333333333337" height="21"/>
+                                <rect key="frame" x="94" y="395.66666666666669" width="167" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -849,7 +849,7 @@ Thank you!</string>
                                 <rect key="frame" x="273" y="390.66666666666669" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location &amp; Cellular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhv-u6-Kd2">
-                                <rect key="frame" x="95.000000000000014" y="295.66666666666669" width="153.33333333333337" height="21"/>
+                                <rect key="frame" x="95" y="295.66666666666669" width="153" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -887,7 +887,7 @@ Thank you!</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On-campus Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzV-cY-241">
-                                <rect key="frame" x="100.00000000000001" y="484" width="155.33333333333337" height="21"/>
+                                <rect key="frame" x="100" y="484" width="155" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

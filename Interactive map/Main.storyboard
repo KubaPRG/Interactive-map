@@ -343,12 +343,12 @@
                         <action selector="hideOnBgTap:" destination="96P-w4-2xH" id="1ao-zO-FZ7"/>
                     </connections>
                 </tapGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="Yfk-f0-TFl">
+                <swipeGestureRecognizer direction="left" id="Yfk-f0-TFl">
                     <connections>
                         <action selector="bgSwipeLeft:" destination="96P-w4-2xH" id="y5N-Sx-H9V"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="Nil-kU-FqT">
+                <swipeGestureRecognizer direction="left" id="Nil-kU-FqT">
                     <connections>
                         <action selector="menuSwipeLeft:" destination="96P-w4-2xH" id="M4V-tK-0s3"/>
                     </connections>
@@ -1591,12 +1591,12 @@ Maker Zone position: Vice President</string>
                         <action selector="hideOnBgTap:" destination="MBA-gu-QaZ" id="A3S-4M-1Cn"/>
                     </connections>
                 </tapGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="7ud-JI-4Bk">
+                <swipeGestureRecognizer direction="left" id="7ud-JI-4Bk">
                     <connections>
                         <action selector="bgSwipeLeft:" destination="MBA-gu-QaZ" id="Q72-5Q-CWw"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="6dM-gY-7Jr">
+                <swipeGestureRecognizer direction="left" id="6dM-gY-7Jr">
                     <connections>
                         <action selector="menuSwipeLeft:" destination="MBA-gu-QaZ" id="szF-P1-hEN"/>
                     </connections>
@@ -1789,12 +1789,12 @@ Maker Zone position: Vice President</string>
                         <action selector="hideOnBgTap:" destination="yEq-22-f2L" id="Yq1-dQ-eaL"/>
                     </connections>
                 </tapGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="PfO-RY-Yhp">
+                <swipeGestureRecognizer direction="left" id="PfO-RY-Yhp">
                     <connections>
                         <action selector="bgSwipeLeft:" destination="yEq-22-f2L" id="SFS-62-hKM"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="4FL-rb-RuO">
+                <swipeGestureRecognizer direction="left" id="4FL-rb-RuO">
                     <connections>
                         <action selector="menuSwipeLeft:" destination="yEq-22-f2L" id="RDH-d5-Bb2"/>
                     </connections>
@@ -1829,11 +1829,11 @@ Maker Zone position: Vice President</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="h3a-1q-Idn"/>
-        <segue reference="BBI-nz-DBL"/>
+        <segue reference="DrR-cH-2LO"/>
         <segue reference="D7N-na-uUV"/>
         <segue reference="Afs-KH-bB9"/>
         <segue reference="r7Y-WR-cDj"/>
         <segue reference="whJ-xv-0dZ"/>
-        <segue reference="t5i-iF-eBw"/>
+        <segue reference="sJN-ci-oxk"/>
     </inferredMetricsTieBreakers>
 </document>

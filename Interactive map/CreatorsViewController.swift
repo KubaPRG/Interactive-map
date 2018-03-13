@@ -27,6 +27,12 @@ class CreatorsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        menu.layer.shadowOpacity = 1
+        menu.layer.shadowRadius = 8
+        
+        buttonMenu.isHidden = false
+        buttonExitMenu.isHidden = true
     }
     
     @IBAction func didTapSGA(_ sender: Any) {

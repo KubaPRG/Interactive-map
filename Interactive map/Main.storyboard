@@ -177,15 +177,184 @@
                                     <action selector="goBackToPreviousView:" destination="96P-w4-2xH" eventType="touchUpInside" id="sfK-VZ-CDk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0K-zZ-Qh0">
+                                <rect key="frame" x="10" y="62" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qDF-uS-73c"/>
+                                    <constraint firstAttribute="width" constant="50" id="tfH-je-bci"/>
+                                </constraints>
+                                <state key="normal" title="Button Menu" image="functions"/>
+                                <connections>
+                                    <action selector="openBg:" destination="96P-w4-2xH" eventType="touchUpInside" id="TR3-bD-IDf"/>
+                                    <action selector="openMenu:" destination="96P-w4-2xH" eventType="touchUpInside" id="p8r-B4-eTi"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mKz-lC-4wX">
+                                <rect key="frame" x="1000" y="0.0" width="500" height="812"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="sOg-xI-idt"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Ykj-CU-ClT" appends="YES" id="uOf-pm-SRn"/>
+                                    <outletCollection property="gestureRecognizers" destination="Yfk-f0-TFl" appends="YES" id="Xxj-2t-b5N"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJB-7j-L0i">
+                                <rect key="frame" x="-300" y="0.0" width="260" height="812"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6q-GT-doe">
+                                        <rect key="frame" x="93" y="174.66666666666666" width="74" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Home">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="v2L-ib-POH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkX-bl-cmP">
+                                        <rect key="frame" x="50" y="244.66666666666663" width="160" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Report Issue">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="cZt-ls-Zek" kind="presentation" modalTransitionStyle="crossDissolve" id="25g-Yf-BIT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6r-Eh-brd">
+                                        <rect key="frame" x="100" y="384.66666666666669" width="60" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Help">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="helpButtonPressed:" destination="96P-w4-2xH" eventType="touchUpInside" id="6RJ-YL-Vl2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMN-FC-Rf2">
+                                        <rect key="frame" x="78" y="314.66666666666669" width="104" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Settings">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="CUv-f1-9P7" kind="presentation" modalTransitionStyle="crossDissolve" id="Bcv-jE-c1b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0h-mX-EGN">
+                                        <rect key="frame" x="76" y="524.66666666666663" width="108" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Creators">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="MBA-gu-QaZ" kind="presentation" modalTransitionStyle="crossDissolve" id="3hG-Su-fY4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bP4-H9-Hkc">
+                                        <rect key="frame" x="50" y="742" width="160" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="7b8-0n-4tH"/>
+                                            <constraint firstAttribute="width" constant="160" id="HGv-RU-ePC"/>
+                                        </constraints>
+                                        <state key="normal" title="Sign Out">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapSignOut:" destination="96P-w4-2xH" eventType="touchUpInside" id="GHg-3X-Hyn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcY-yP-GOX">
+                                        <rect key="frame" x="70" y="454.66666666666669" width="121" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Feedback">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="yEq-22-f2L" kind="presentation" modalTransitionStyle="crossDissolve" id="NRV-Bp-0oi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.241182059" green="0.44567662479999998" blue="0.081566743550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="T6r-Eh-brd" firstAttribute="centerX" secondItem="gJB-7j-L0i" secondAttribute="centerX" id="5lk-nn-tWd"/>
+                                    <constraint firstItem="T6r-Eh-brd" firstAttribute="centerY" secondItem="gJB-7j-L0i" secondAttribute="centerY" id="61Q-Jy-YFY"/>
+                                    <constraint firstAttribute="width" constant="260" id="AHX-OD-ZyR"/>
+                                    <constraint firstItem="U0h-mX-EGN" firstAttribute="centerY" secondItem="gJB-7j-L0i" secondAttribute="centerY" constant="140" id="FfQ-No-6mD"/>
+                                    <constraint firstItem="Q6q-GT-doe" firstAttribute="centerY" secondItem="gJB-7j-L0i" secondAttribute="centerY" constant="-210" id="GIQ-K9-XqO"/>
+                                    <constraint firstItem="U0h-mX-EGN" firstAttribute="centerX" secondItem="gJB-7j-L0i" secondAttribute="centerX" id="Ii1-9o-F3Z"/>
+                                    <constraint firstItem="fcY-yP-GOX" firstAttribute="centerY" secondItem="gJB-7j-L0i" secondAttribute="centerY" constant="70" id="JiH-Ia-Bmv"/>
+                                    <constraint firstItem="bP4-H9-Hkc" firstAttribute="centerX" secondItem="gJB-7j-L0i" secondAttribute="centerX" id="K8U-XY-6sV"/>
+                                    <constraint firstAttribute="bottom" secondItem="bP4-H9-Hkc" secondAttribute="bottom" constant="40" id="O8z-67-6b2"/>
+                                    <constraint firstItem="nkX-bl-cmP" firstAttribute="centerX" secondItem="gJB-7j-L0i" secondAttribute="centerX" id="PP9-QM-gus"/>
+                                    <constraint firstItem="nkX-bl-cmP" firstAttribute="centerY" secondItem="gJB-7j-L0i" secondAttribute="centerY" constant="-140" id="gdk-jA-ZLa"/>
+                                    <constraint firstItem="Q6q-GT-doe" firstAttribute="centerX" secondItem="gJB-7j-L0i" secondAttribute="centerX" id="kE9-JH-PV5"/>
+                                    <constraint firstItem="wMN-FC-Rf2" firstAttribute="centerY" secondItem="gJB-7j-L0i" secondAttribute="centerY" constant="-70" id="pm5-In-ewk"/>
+                                    <constraint firstItem="fcY-yP-GOX" firstAttribute="centerX" secondItem="gJB-7j-L0i" secondAttribute="centerX" id="qVK-lf-V5B"/>
+                                    <constraint firstItem="wMN-FC-Rf2" firstAttribute="centerX" secondItem="gJB-7j-L0i" secondAttribute="centerX" id="wYB-Df-K2k"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Nil-kU-FqT" appends="YES" id="00t-eu-AvA"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zr-NX-1HH">
+                                <rect key="frame" x="-271" y="67" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="IWX-Vg-nDo"/>
+                                    <constraint firstAttribute="width" constant="28" id="J0r-i2-nXN"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="X"/>
+                                <connections>
+                                    <action selector="closeMenu:" destination="96P-w4-2xH" eventType="touchUpInside" id="Vum-0N-1Ws"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="mKz-lC-4wX" secondAttribute="bottom" id="7N6-GW-Cwe"/>
+                            <constraint firstItem="2Zr-NX-1HH" firstAttribute="top" secondItem="Flt-ix-8Bo" secondAttribute="bottom" constant="23" id="AGX-KR-Hxz"/>
+                            <constraint firstItem="A0K-zZ-Qh0" firstAttribute="top" secondItem="YyC-Ou-ZLr" secondAttribute="topMargin" constant="18" id="IbI-RC-MHr"/>
+                            <constraint firstItem="mKz-lC-4wX" firstAttribute="leading" secondItem="YyC-Ou-ZLr" secondAttribute="leading" constant="1000" id="ZcR-bU-jJV"/>
+                            <constraint firstItem="gJB-7j-L0i" firstAttribute="top" secondItem="YyC-Ou-ZLr" secondAttribute="top" id="gXs-Ip-6Ky"/>
                             <constraint firstItem="9x3-hY-URk" firstAttribute="centerY" secondItem="YyC-Ou-ZLr" secondAttribute="centerY" id="p47-xf-Qjl"/>
+                            <constraint firstItem="A0K-zZ-Qh0" firstAttribute="leading" secondItem="YyC-Ou-ZLr" secondAttribute="leading" constant="10" id="ptG-y9-dcA"/>
+                            <constraint firstItem="2Zr-NX-1HH" firstAttribute="leading" secondItem="gJB-7j-L0i" secondAttribute="leadingMargin" constant="13" id="tbq-Aw-plv"/>
+                            <constraint firstAttribute="bottom" secondItem="gJB-7j-L0i" secondAttribute="bottom" id="vJ0-vF-hMh"/>
                             <constraint firstItem="9x3-hY-URk" firstAttribute="centerX" secondItem="YyC-Ou-ZLr" secondAttribute="centerX" id="wef-Qo-lPr"/>
+                            <constraint firstItem="gJB-7j-L0i" firstAttribute="leading" secondItem="YyC-Ou-ZLr" secondAttribute="leading" constant="-300" id="xqH-FL-Bp9"/>
+                            <constraint firstItem="mKz-lC-4wX" firstAttribute="top" secondItem="YyC-Ou-ZLr" secondAttribute="top" id="xxA-is-aua"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonExitMenu" destination="2Zr-NX-1HH" id="in8-QE-owg"/>
+                        <outlet property="buttonMenu" destination="A0K-zZ-Qh0" id="op1-PP-6Ow"/>
+                        <outlet property="darkBg" destination="mKz-lC-4wX" id="lOp-JL-5IK"/>
+                        <outlet property="darkBgConst" destination="ZcR-bU-jJV" id="vxX-6c-bmY"/>
+                        <outlet property="menu" destination="gJB-7j-L0i" id="rmA-NH-g9A"/>
+                        <outlet property="menuLeadingConst" destination="xqH-FL-Bp9" id="5Gf-eq-RqT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fte-et-Wl2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Ykj-CU-ClT">
+                    <connections>
+                        <action selector="hideOnBgTap:" destination="96P-w4-2xH" id="1ao-zO-FZ7"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Yfk-f0-TFl">
+                    <connections>
+                        <action selector="bgSwipeLeft:" destination="96P-w4-2xH" id="y5N-Sx-H9V"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Nil-kU-FqT">
+                    <connections>
+                        <action selector="menuSwipeLeft:" destination="96P-w4-2xH" id="M4V-tK-0s3"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-882" y="985"/>
         </scene>
@@ -320,8 +489,8 @@ Thank you!</string>
                                     <outletCollection property="gestureRecognizers" destination="uCq-x9-Fhe" appends="YES" id="31W-FS-R9O"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lj3-X2-BBA">
-                                <rect key="frame" x="-300" y="0.0" width="260" height="812"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lj3-X2-BBA">
+                                <rect key="frame" x="0.0" y="0.0" width="260" height="812"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GR0-6v-dv1">
                                         <rect key="frame" x="93" y="174.66666666666666" width="74" height="43"/>
@@ -422,8 +591,8 @@ Thank you!</string>
                                     <outletCollection property="gestureRecognizers" destination="czK-MS-ZcW" appends="YES" id="BOF-f9-zx2"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OC-Jf-Y59">
-                                <rect key="frame" x="-279" y="67" width="28" height="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OC-Jf-Y59">
+                                <rect key="frame" x="21" y="67" width="28" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="WKm-FZ-R8B"/>
                                     <constraint firstAttribute="width" constant="28" id="dhA-5j-KXd"/>
@@ -1238,17 +1407,160 @@ Maker Zone position: Vice President</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzx-xA-ebH">
+                                <rect key="frame" x="10" y="62" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="jeE-Ey-Xsl"/>
+                                    <constraint firstAttribute="width" constant="50" id="wXM-fr-Mtx"/>
+                                </constraints>
+                                <state key="normal" title="Button Menu" image="functions"/>
+                                <connections>
+                                    <action selector="openBg:" destination="MBA-gu-QaZ" eventType="touchUpInside" id="8WM-bw-uev"/>
+                                    <action selector="openMenu:" destination="MBA-gu-QaZ" eventType="touchUpInside" id="KfU-nN-G6e"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jW0-7Y-Muv">
+                                <rect key="frame" x="1000" y="0.0" width="500" height="812"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="QSl-io-NOT"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="x0U-md-DfO" appends="YES" id="Uag-M4-NV1"/>
+                                    <outletCollection property="gestureRecognizers" destination="7ud-JI-4Bk" appends="YES" id="jgj-CS-NFY"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQv-xO-dt9">
+                                <rect key="frame" x="-300" y="0.0" width="260" height="812"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldL-8h-9dF">
+                                        <rect key="frame" x="93" y="174.66666666666666" width="74" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Home">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="r7Y-WR-cDj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wQ-vI-HCa">
+                                        <rect key="frame" x="50" y="244.66666666666663" width="160" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Report Issue">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="cZt-ls-Zek" kind="presentation" modalTransitionStyle="crossDissolve" id="Afs-KH-bB9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXc-yr-VbK">
+                                        <rect key="frame" x="100" y="384.66666666666669" width="60" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Help">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="96P-w4-2xH" kind="presentation" modalTransitionStyle="crossDissolve" id="whJ-xv-0dZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2w-VQ-jpt">
+                                        <rect key="frame" x="78" y="314.66666666666669" width="104" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Settings">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="CUv-f1-9P7" kind="presentation" modalTransitionStyle="crossDissolve" id="D7N-na-uUV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlX-jZ-2t3">
+                                        <rect key="frame" x="76" y="524.66666666666663" width="108" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Creators">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="creatorsButtonPressed:" destination="MBA-gu-QaZ" eventType="touchUpInside" id="d0W-dI-lPA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1I-6U-Vzk">
+                                        <rect key="frame" x="50" y="742" width="160" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="3s4-bU-Snh"/>
+                                            <constraint firstAttribute="height" constant="30" id="sjp-zb-liJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Sign Out">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapSignOut:" destination="MBA-gu-QaZ" eventType="touchUpInside" id="DPh-Ll-6KD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LA4-2H-mEw">
+                                        <rect key="frame" x="70" y="454.66666666666669" width="121" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Feedback">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="yEq-22-f2L" kind="presentation" modalTransitionStyle="crossDissolve" id="h3a-1q-Idn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.241182059" green="0.44567662479999998" blue="0.081566743550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="ldL-8h-9dF" firstAttribute="centerY" secondItem="CQv-xO-dt9" secondAttribute="centerY" constant="-210" id="1wz-Ws-WwH"/>
+                                    <constraint firstItem="V2w-VQ-jpt" firstAttribute="centerY" secondItem="CQv-xO-dt9" secondAttribute="centerY" constant="-70" id="43f-L0-WPa"/>
+                                    <constraint firstItem="OXc-yr-VbK" firstAttribute="centerX" secondItem="CQv-xO-dt9" secondAttribute="centerX" id="KUh-T0-KTT"/>
+                                    <constraint firstItem="LA4-2H-mEw" firstAttribute="centerY" secondItem="CQv-xO-dt9" secondAttribute="centerY" constant="70" id="M1j-bL-0Wq"/>
+                                    <constraint firstItem="7wQ-vI-HCa" firstAttribute="centerX" secondItem="CQv-xO-dt9" secondAttribute="centerX" id="N2x-wc-hu1"/>
+                                    <constraint firstItem="OXc-yr-VbK" firstAttribute="centerY" secondItem="CQv-xO-dt9" secondAttribute="centerY" id="Zal-At-Xk8"/>
+                                    <constraint firstItem="V2w-VQ-jpt" firstAttribute="centerX" secondItem="CQv-xO-dt9" secondAttribute="centerX" id="a9f-fM-yKY"/>
+                                    <constraint firstAttribute="bottom" secondItem="h1I-6U-Vzk" secondAttribute="bottom" constant="40" id="cNU-Fx-gOZ"/>
+                                    <constraint firstItem="dlX-jZ-2t3" firstAttribute="centerY" secondItem="CQv-xO-dt9" secondAttribute="centerY" constant="140" id="gwq-L7-Tl0"/>
+                                    <constraint firstItem="7wQ-vI-HCa" firstAttribute="centerY" secondItem="CQv-xO-dt9" secondAttribute="centerY" constant="-140" id="iO2-SC-Qhw"/>
+                                    <constraint firstItem="LA4-2H-mEw" firstAttribute="centerX" secondItem="CQv-xO-dt9" secondAttribute="centerX" id="jU3-Be-QE6"/>
+                                    <constraint firstAttribute="width" constant="260" id="oWm-nk-ZEp"/>
+                                    <constraint firstItem="h1I-6U-Vzk" firstAttribute="centerX" secondItem="CQv-xO-dt9" secondAttribute="centerX" id="sXD-6e-b1U"/>
+                                    <constraint firstItem="dlX-jZ-2t3" firstAttribute="centerX" secondItem="CQv-xO-dt9" secondAttribute="centerX" id="uRW-IZ-6aP"/>
+                                    <constraint firstItem="ldL-8h-9dF" firstAttribute="centerX" secondItem="CQv-xO-dt9" secondAttribute="centerX" id="ysv-Lo-tOa"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="6dM-gY-7Jr" appends="YES" id="DEp-CO-gmI"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vj6-Ga-9YC">
+                                <rect key="frame" x="-279" y="67" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Ezi-hC-txv"/>
+                                    <constraint firstAttribute="width" constant="28" id="MNT-n8-hMe"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="X"/>
+                                <connections>
+                                    <action selector="closeMenu:" destination="MBA-gu-QaZ" eventType="touchUpInside" id="hQr-k4-Hp2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="xzx-xA-ebH" firstAttribute="top" secondItem="Kql-iQ-gqu" secondAttribute="bottom" constant="18" id="2PP-gy-rDe"/>
+                            <constraint firstAttribute="bottom" secondItem="CQv-xO-dt9" secondAttribute="bottom" id="3ey-l5-9Tt"/>
                             <constraint firstItem="a6O-7s-bv1" firstAttribute="centerX" secondItem="Hzh-RQ-YEb" secondAttribute="centerX" id="63M-59-f7p"/>
+                            <constraint firstItem="CQv-xO-dt9" firstAttribute="top" secondItem="Hzh-RQ-YEb" secondAttribute="top" id="9U1-K6-FcT"/>
                             <constraint firstItem="d1X-g0-TvL" firstAttribute="leading" secondItem="Hzh-RQ-YEb" secondAttribute="leading" id="GAL-br-r38"/>
                             <constraint firstItem="NAp-3N-VOK" firstAttribute="centerX" secondItem="Hzh-RQ-YEb" secondAttribute="centerX" constant="-80" id="Ja3-NG-UzK"/>
                             <constraint firstItem="TeP-Aj-gdv" firstAttribute="centerX" secondItem="Hzh-RQ-YEb" secondAttribute="centerX" id="Nio-wL-Pyc"/>
+                            <constraint firstAttribute="bottom" secondItem="jW0-7Y-Muv" secondAttribute="bottom" id="OPa-hn-CTO"/>
                             <constraint firstItem="TeP-Aj-gdv" firstAttribute="top" secondItem="K4e-Vw-tAs" secondAttribute="bottom" constant="5" id="PMt-ae-grw"/>
+                            <constraint firstItem="Vj6-Ga-9YC" firstAttribute="leading" secondItem="CQv-xO-dt9" secondAttribute="leadingMargin" constant="13" id="Pcc-W8-WMC"/>
                             <constraint firstAttribute="trailing" secondItem="d1X-g0-TvL" secondAttribute="trailing" id="Pmf-p8-KVS"/>
                             <constraint firstItem="lzQ-cU-L0A" firstAttribute="top" secondItem="YGB-XC-DTe" secondAttribute="bottom" constant="8" id="QxZ-VM-boc"/>
+                            <constraint firstItem="Vj6-Ga-9YC" firstAttribute="top" secondItem="Kql-iQ-gqu" secondAttribute="bottom" constant="23" id="Sha-wd-y4m"/>
                             <constraint firstItem="bFv-Yg-t89" firstAttribute="centerX" secondItem="Hzh-RQ-YEb" secondAttribute="centerX" id="Suj-wX-NsG"/>
+                            <constraint firstItem="CQv-xO-dt9" firstAttribute="leading" secondItem="Hzh-RQ-YEb" secondAttribute="leading" constant="-300" id="TA9-UF-bZS"/>
                             <constraint firstItem="R5n-Ls-dWN" firstAttribute="centerX" secondItem="Hzh-RQ-YEb" secondAttribute="centerX" id="VEg-2b-AWG"/>
                             <constraint firstItem="DsW-Va-WWr" firstAttribute="centerX" secondItem="Hzh-RQ-YEb" secondAttribute="centerX" id="XZJ-yg-3BA"/>
                             <constraint firstItem="R5n-Ls-dWN" firstAttribute="top" secondItem="TeP-Aj-gdv" secondAttribute="bottom" constant="8" id="aNw-Nm-POa"/>
@@ -1257,7 +1569,10 @@ Maker Zone position: Vice President</string>
                             <constraint firstItem="d1X-g0-TvL" firstAttribute="top" secondItem="Hzh-RQ-YEb" secondAttribute="top" id="bqv-K7-Py8"/>
                             <constraint firstItem="bFv-Yg-t89" firstAttribute="top" secondItem="R5n-Ls-dWN" secondAttribute="bottom" constant="10" id="cLb-EC-ir3"/>
                             <constraint firstAttribute="bottom" secondItem="d1X-g0-TvL" secondAttribute="bottom" id="dqv-ji-XrP"/>
+                            <constraint firstItem="jW0-7Y-Muv" firstAttribute="top" secondItem="Hzh-RQ-YEb" secondAttribute="top" id="eaZ-Cr-rIb"/>
                             <constraint firstItem="lzQ-cU-L0A" firstAttribute="centerX" secondItem="Hzh-RQ-YEb" secondAttribute="centerX" id="fjA-ee-n9B"/>
+                            <constraint firstItem="xzx-xA-ebH" firstAttribute="leading" secondItem="Hzh-RQ-YEb" secondAttribute="leading" constant="10" id="kR9-O1-cmu"/>
+                            <constraint firstItem="jW0-7Y-Muv" firstAttribute="leading" secondItem="Hzh-RQ-YEb" secondAttribute="leading" constant="1000" id="kbO-31-kjR"/>
                             <constraint firstItem="R5n-Ls-dWN" firstAttribute="centerY" secondItem="Hzh-RQ-YEb" secondAttribute="centerY" id="lcn-m8-snd"/>
                             <constraint firstItem="YGB-XC-DTe" firstAttribute="centerX" secondItem="Hzh-RQ-YEb" secondAttribute="centerX" id="muD-8E-uJ8"/>
                             <constraint firstItem="K4e-Vw-tAs" firstAttribute="centerX" secondItem="Hzh-RQ-YEb" secondAttribute="centerX" constant="80" id="nwH-u3-dOy"/>
@@ -1265,8 +1580,31 @@ Maker Zone position: Vice President</string>
                             <constraint firstItem="NAp-3N-VOK" firstAttribute="top" secondItem="a6O-7s-bv1" secondAttribute="bottom" constant="5" id="rIj-4W-J1I"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonExitMenu" destination="Vj6-Ga-9YC" id="Qlw-f3-4a6"/>
+                        <outlet property="buttonMenu" destination="xzx-xA-ebH" id="ajY-oa-TEv"/>
+                        <outlet property="darkBg" destination="jW0-7Y-Muv" id="BRw-sf-Q2p"/>
+                        <outlet property="darkBgConst" destination="kbO-31-kjR" id="wYB-JL-zzR"/>
+                        <outlet property="menu" destination="CQv-xO-dt9" id="8eN-nP-mTE"/>
+                        <outlet property="menuLeadingConst" destination="TA9-UF-bZS" id="C4R-e4-SOE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZKN-EH-eoZ" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="x0U-md-DfO">
+                    <connections>
+                        <action selector="hideOnBgTap:" destination="MBA-gu-QaZ" id="A3S-4M-1Cn"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="7ud-JI-4Bk">
+                    <connections>
+                        <action selector="bgSwipeLeft:" destination="MBA-gu-QaZ" id="Q72-5Q-CWw"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="6dM-gY-7Jr">
+                    <connections>
+                        <action selector="menuSwipeLeft:" destination="MBA-gu-QaZ" id="szF-P1-hEN"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="888.79999999999995" y="984.55772113943033"/>
         </scene>
@@ -1289,15 +1627,184 @@ Maker Zone position: Vice President</string>
                                     <action selector="goBackToPreviousView:" destination="yEq-22-f2L" eventType="touchUpInside" id="edU-Xn-RLL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AI6-t4-qt5">
+                                <rect key="frame" x="10" y="62" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Un0-D1-iUk"/>
+                                    <constraint firstAttribute="height" constant="40" id="crs-JO-OrW"/>
+                                </constraints>
+                                <state key="normal" title="Button Menu" image="functions"/>
+                                <connections>
+                                    <action selector="openBg:" destination="yEq-22-f2L" eventType="touchUpInside" id="zq8-Ti-N1L"/>
+                                    <action selector="openMenu:" destination="yEq-22-f2L" eventType="touchUpInside" id="GzW-bP-nVX"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8au-8A-qk5">
+                                <rect key="frame" x="1000" y="0.0" width="500" height="812"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="xhz-Hb-JUA"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="DP9-ic-H2J" appends="YES" id="zQB-QI-PHn"/>
+                                    <outletCollection property="gestureRecognizers" destination="PfO-RY-Yhp" appends="YES" id="pO2-mo-XA6"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YpP-lh-INZ">
+                                <rect key="frame" x="-300" y="0.0" width="260" height="812"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5e-GO-kze">
+                                        <rect key="frame" x="93" y="174.66666666666666" width="74" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Home">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="Cri-3U-kad"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19s-i4-twb">
+                                        <rect key="frame" x="50" y="244.66666666666663" width="160" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Report Issue">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="cZt-ls-Zek" kind="presentation" modalTransitionStyle="crossDissolve" id="Ea7-hL-dUT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kio-4A-zH8">
+                                        <rect key="frame" x="100" y="384.66666666666669" width="60" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Help">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="96P-w4-2xH" kind="presentation" modalTransitionStyle="crossDissolve" id="Ne7-sL-PWl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfS-jc-wwj">
+                                        <rect key="frame" x="78" y="314.66666666666669" width="104" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Settings">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="CUv-f1-9P7" kind="presentation" modalTransitionStyle="crossDissolve" id="gyl-kM-2ah"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPq-4B-kte">
+                                        <rect key="frame" x="76" y="524.66666666666663" width="108" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Creators">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="MBA-gu-QaZ" kind="presentation" modalTransitionStyle="crossDissolve" id="BBI-nz-DBL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02n-yi-rO8">
+                                        <rect key="frame" x="50" y="742" width="160" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="EZZ-lI-Twt"/>
+                                            <constraint firstAttribute="width" constant="160" id="qT9-Fi-ohN"/>
+                                        </constraints>
+                                        <state key="normal" title="Sign Out">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapSignOut:" destination="yEq-22-f2L" eventType="touchUpInside" id="UKG-hp-xRE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLf-vK-9yx">
+                                        <rect key="frame" x="70" y="454.66666666666669" width="121" height="43"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                        <state key="normal" title="Feedback">
+                                            <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="feedbackButtonPressed:" destination="yEq-22-f2L" eventType="touchUpInside" id="Amg-OS-YpV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.241182059" green="0.44567662479999998" blue="0.081566743550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="Kio-4A-zH8" firstAttribute="centerY" secondItem="YpP-lh-INZ" secondAttribute="centerY" id="6O6-w8-RII"/>
+                                    <constraint firstItem="PPq-4B-kte" firstAttribute="centerX" secondItem="YpP-lh-INZ" secondAttribute="centerX" id="9jQ-ov-FMb"/>
+                                    <constraint firstItem="19s-i4-twb" firstAttribute="centerY" secondItem="YpP-lh-INZ" secondAttribute="centerY" constant="-140" id="AkM-1G-Rvb"/>
+                                    <constraint firstItem="VfS-jc-wwj" firstAttribute="centerY" secondItem="YpP-lh-INZ" secondAttribute="centerY" constant="-70" id="JUq-Hd-shz"/>
+                                    <constraint firstItem="I5e-GO-kze" firstAttribute="centerX" secondItem="YpP-lh-INZ" secondAttribute="centerX" id="Ka8-nR-0SI"/>
+                                    <constraint firstItem="02n-yi-rO8" firstAttribute="centerX" secondItem="YpP-lh-INZ" secondAttribute="centerX" id="PHk-BV-O8y"/>
+                                    <constraint firstAttribute="bottom" secondItem="02n-yi-rO8" secondAttribute="bottom" constant="40" id="Pk0-0q-260"/>
+                                    <constraint firstItem="VfS-jc-wwj" firstAttribute="centerX" secondItem="YpP-lh-INZ" secondAttribute="centerX" id="Qlc-vF-vMW"/>
+                                    <constraint firstItem="JLf-vK-9yx" firstAttribute="centerX" secondItem="YpP-lh-INZ" secondAttribute="centerX" id="aBk-K0-mX3"/>
+                                    <constraint firstItem="PPq-4B-kte" firstAttribute="centerY" secondItem="YpP-lh-INZ" secondAttribute="centerY" constant="140" id="aoi-5k-St1"/>
+                                    <constraint firstItem="19s-i4-twb" firstAttribute="centerX" secondItem="YpP-lh-INZ" secondAttribute="centerX" id="fNC-0O-TnG"/>
+                                    <constraint firstAttribute="width" constant="260" id="jpp-OM-4jt"/>
+                                    <constraint firstItem="JLf-vK-9yx" firstAttribute="centerY" secondItem="YpP-lh-INZ" secondAttribute="centerY" constant="70" id="rXO-fQ-D7W"/>
+                                    <constraint firstItem="I5e-GO-kze" firstAttribute="centerY" secondItem="YpP-lh-INZ" secondAttribute="centerY" constant="-210" id="wVs-i0-qQG"/>
+                                    <constraint firstItem="Kio-4A-zH8" firstAttribute="centerX" secondItem="YpP-lh-INZ" secondAttribute="centerX" id="zWv-Yq-CL3"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4FL-rb-RuO" appends="YES" id="acE-ma-QOQ"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YqA-0q-nt0">
+                                <rect key="frame" x="-271" y="67" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="dGW-Cr-CnY"/>
+                                    <constraint firstAttribute="height" constant="28" id="s74-zJ-muR"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="X"/>
+                                <connections>
+                                    <action selector="closeMenu:" destination="yEq-22-f2L" eventType="touchUpInside" id="3fC-ZO-uLx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="AI6-t4-qt5" firstAttribute="top" secondItem="9S4-n9-ExU" secondAttribute="bottom" constant="18" id="8VR-Ed-TAG"/>
+                            <constraint firstItem="AI6-t4-qt5" firstAttribute="leading" secondItem="8jt-Qd-9Og" secondAttribute="leading" constant="10" id="J0q-uB-BRJ"/>
                             <constraint firstItem="QLS-z5-5mu" firstAttribute="centerY" secondItem="8jt-Qd-9Og" secondAttribute="centerY" id="TjV-qb-bGD"/>
+                            <constraint firstItem="8au-8A-qk5" firstAttribute="leading" secondItem="8jt-Qd-9Og" secondAttribute="leading" constant="1000" id="ax4-3g-HAO"/>
+                            <constraint firstItem="8au-8A-qk5" firstAttribute="top" secondItem="8jt-Qd-9Og" secondAttribute="top" id="cJA-Zr-sgY"/>
+                            <constraint firstItem="YqA-0q-nt0" firstAttribute="leading" secondItem="YpP-lh-INZ" secondAttribute="leadingMargin" constant="13" id="eWh-zB-eii"/>
+                            <constraint firstAttribute="bottom" secondItem="8au-8A-qk5" secondAttribute="bottom" id="gei-8n-gPt"/>
+                            <constraint firstItem="YpP-lh-INZ" firstAttribute="leading" secondItem="8jt-Qd-9Og" secondAttribute="leading" constant="-300" id="idh-o9-HNa"/>
                             <constraint firstItem="QLS-z5-5mu" firstAttribute="centerX" secondItem="8jt-Qd-9Og" secondAttribute="centerX" id="jG9-bL-6Wn"/>
+                            <constraint firstItem="YpP-lh-INZ" firstAttribute="top" secondItem="8jt-Qd-9Og" secondAttribute="top" id="pYn-Bw-3Qn"/>
+                            <constraint firstAttribute="bottom" secondItem="YpP-lh-INZ" secondAttribute="bottom" id="rnC-CT-BXS"/>
+                            <constraint firstItem="YqA-0q-nt0" firstAttribute="top" secondItem="9S4-n9-ExU" secondAttribute="bottom" constant="23" id="rpo-xR-eeL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonExitMenu" destination="YqA-0q-nt0" id="zN1-dh-XHN"/>
+                        <outlet property="buttonMenu" destination="AI6-t4-qt5" id="LoA-3z-0m7"/>
+                        <outlet property="darkBg" destination="8au-8A-qk5" id="JMi-8v-JdJ"/>
+                        <outlet property="darkBgConst" destination="ax4-3g-HAO" id="v2O-Xc-aDE"/>
+                        <outlet property="menu" destination="YpP-lh-INZ" id="x16-B2-pUH"/>
+                        <outlet property="menuLeadingConst" destination="idh-o9-HNa" id="LCa-mE-sva"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Caj-dQ-qsK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="DP9-ic-H2J">
+                    <connections>
+                        <action selector="hideOnBgTap:" destination="yEq-22-f2L" id="Yq1-dQ-eaL"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="PfO-RY-Yhp">
+                    <connections>
+                        <action selector="bgSwipeLeft:" destination="yEq-22-f2L" id="SFS-62-hKM"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="4FL-rb-RuO">
+                    <connections>
+                        <action selector="menuSwipeLeft:" destination="yEq-22-f2L" id="RDH-d5-Bb2"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-7" y="985"/>
         </scene>
@@ -1327,12 +1834,12 @@ Maker Zone position: Vice President</string>
         <image name="trees" width="2272" height="1704"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Mhr-6b-Rza"/>
-        <segue reference="DrR-cH-2LO"/>
-        <segue reference="Fv6-LB-iXI"/>
-        <segue reference="BdG-6s-wFZ"/>
-        <segue reference="dlm-G7-kth"/>
-        <segue reference="knH-aq-oau"/>
+        <segue reference="h3a-1q-Idn"/>
+        <segue reference="BBI-nz-DBL"/>
+        <segue reference="D7N-na-uUV"/>
+        <segue reference="Afs-KH-bB9"/>
+        <segue reference="r7Y-WR-cDj"/>
+        <segue reference="whJ-xv-0dZ"/>
         <segue reference="Vda-HA-Zq6"/>
     </inferredMetricsTieBreakers>
 </document>

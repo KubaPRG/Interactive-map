@@ -350,7 +350,7 @@ Thank you!</string>
                                             <color key="titleColor" red="0.73172837495803833" green="0.68572419881820679" blue="0.13252037763595581" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="96P-w4-2xH" kind="presentation" id="knH-aq-oau"/>
+                                            <segue destination="96P-w4-2xH" kind="presentation" modalTransitionStyle="crossDissolve" id="knH-aq-oau"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFj-u7-y1c">
@@ -370,7 +370,7 @@ Thank you!</string>
                                             <color key="titleColor" red="0.73172837495803833" green="0.68572419881820679" blue="0.13252037763595581" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="MBA-gu-QaZ" kind="presentation" id="DrR-cH-2LO"/>
+                                            <segue destination="MBA-gu-QaZ" kind="presentation" modalTransitionStyle="crossDissolve" id="DrR-cH-2LO"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elW-9z-f6m">
@@ -394,7 +394,7 @@ Thank you!</string>
                                             <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="yEq-22-f2L" kind="presentation" id="Mhr-6b-Rza"/>
+                                            <segue destination="yEq-22-f2L" kind="presentation" modalTransitionStyle="crossDissolve" id="Mhr-6b-Rza"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -614,7 +614,7 @@ Thank you!</string>
                                             <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="96P-w4-2xH" kind="presentation" id="Ttf-TW-pwE"/>
+                                            <segue destination="96P-w4-2xH" kind="presentation" modalTransitionStyle="crossDissolve" id="Ttf-TW-pwE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ah4-I9-XPc">
@@ -634,7 +634,7 @@ Thank you!</string>
                                             <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="MBA-gu-QaZ" kind="presentation" id="dax-nv-qYI"/>
+                                            <segue destination="MBA-gu-QaZ" kind="presentation" modalTransitionStyle="crossDissolve" id="dax-nv-qYI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDU-Oi-sro">
@@ -658,7 +658,7 @@ Thank you!</string>
                                             <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="yEq-22-f2L" kind="presentation" id="nRp-dZ-XuO"/>
+                                            <segue destination="yEq-22-f2L" kind="presentation" modalTransitionStyle="crossDissolve" id="nRp-dZ-XuO"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -931,8 +931,8 @@ Thank you!</string>
                                     <outletCollection property="gestureRecognizers" destination="oy1-oU-AMc" appends="YES" id="f8u-TA-Eg2"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kS4-P1-AOv">
-                                <rect key="frame" x="-300" y="0.0" width="260" height="812"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kS4-P1-AOv">
+                                <rect key="frame" x="0.0" y="0.0" width="260" height="812"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xca-Wc-Tu1">
                                         <rect key="frame" x="93" y="174.66666666666666" width="74" height="43"/>
@@ -961,7 +961,7 @@ Thank you!</string>
                                             <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="96P-w4-2xH" kind="presentation" id="TgV-1z-ImP"/>
+                                            <segue destination="96P-w4-2xH" kind="presentation" modalTransitionStyle="crossDissolve" id="TgV-1z-ImP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRC-fN-d8A">
@@ -981,7 +981,7 @@ Thank you!</string>
                                             <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="MBA-gu-QaZ" kind="presentation" id="r5N-05-Uv8"/>
+                                            <segue destination="MBA-gu-QaZ" kind="presentation" modalTransitionStyle="crossDissolve" id="r5N-05-Uv8"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0P-9c-tsx">
@@ -1005,7 +1005,7 @@ Thank you!</string>
                                             <color key="titleColor" red="0.73172837499999999" green="0.68572419880000002" blue="0.13252037759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="yEq-22-f2L" kind="presentation" id="neF-oB-V5I"/>
+                                            <segue destination="yEq-22-f2L" kind="presentation" modalTransitionStyle="crossDissolve" id="neF-oB-V5I"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1327,12 +1327,12 @@ Maker Zone position: Vice President</string>
         <image name="trees" width="2272" height="1704"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nRp-dZ-XuO"/>
-        <segue reference="dax-nv-qYI"/>
-        <segue reference="ul7-Se-MvY"/>
+        <segue reference="Mhr-6b-Rza"/>
+        <segue reference="DrR-cH-2LO"/>
+        <segue reference="Fv6-LB-iXI"/>
         <segue reference="BdG-6s-wFZ"/>
-        <segue reference="AEU-2o-KKl"/>
-        <segue reference="Ttf-TW-pwE"/>
-        <segue reference="r0y-R2-VSX"/>
+        <segue reference="dlm-G7-kth"/>
+        <segue reference="knH-aq-oau"/>
+        <segue reference="Vda-HA-Zq6"/>
     </inferredMetricsTieBreakers>
 </document>

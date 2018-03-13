@@ -9,7 +9,6 @@
 import UIKit
 import MapKit
 import CoreLocation
-import CoreBluetooth
 
 var myLocation = CLLocationCoordinate2DMake(43.0487734, -76.0875042)
 

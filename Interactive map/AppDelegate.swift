@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let sb = UIStoryboard(name: "Main", bundle: nil)
             if let homePage = sb.instantiateViewController(withIdentifier: "HomePage") as? UIViewController {
                 window?.rootViewController = homePage}
-            dismissal?.dismiss(animated: true, completion: nil)
+            
         } else {
             let sb = UIStoryboard(name: "Main", bundle: nil)
             if let loginPage = sb.instantiateViewController(withIdentifier: "LoginPage") as? UIViewController {
@@ -64,14 +64,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
                 if launchedBefore  {
                     self.setHomePage()
-                    dismissal?.dismiss(animated: true, completion: nil)
+                    
                     print("This is not first launch.")
                 } else {
                     self.setHomePage()
                     let sb = UIStoryboard(name: "Main", bundle: nil)
                     let tvc = sb.instantiateViewController(withIdentifier: "TutorialPage")
                     self.window?.rootViewController?.present(tvc, animated: true, completion: nil)
-                    dismissal?.dismiss(animated: true, completion: nil)
+                    
                     UserDefaults.standard.set(true, forKey: "launchedBefore")
                     UserDefaults.standard.synchronize()
                     print("This is first launch.")
